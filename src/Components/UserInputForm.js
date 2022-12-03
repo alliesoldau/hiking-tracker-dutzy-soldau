@@ -5,23 +5,25 @@ function UserInputForm() {
         <div className="UserInputForm">
             <form>
                 <p>User Input Form</p>
+                <div>
+                     <button type='submit'>Submit Form</button>
+                </div><br/>
                 <div className="UserInputDropDowns-Container">
                     <div className="Date-Container">
-                        <label for="date" >Date: </label><br/><br/>
+                        <label>Date: </label><br/><br/>
                         <input type="date" id="date" name="date" />
                     </div>
                     <div className="Buddies-Container">
-                        <p>Buddies</p>
+                        <label>Buddies: </label>
+                        <input type="text" id="buddies"  name="buddies" />
                     </div>
                     <div className="Notes-Container">
-                        <p>Notes</p>
+                        <label>Notes: </label>
+                        <input type="text" id="notes"  name="notes" />
                     </div>
                     <div className="Pics-Container">
-                        <label for="myfile">Upload Your Photos: </label><br/>
+                        <label>Upload Your Photos: </label><br/>
                         <input type="file" id="photos" name="photos"/>
-                    </div>
-                    <div>
-                     <button type='submit'>Submit Form</button>
                     </div>
                 </div>
             </form>

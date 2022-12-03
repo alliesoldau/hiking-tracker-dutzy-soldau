@@ -6,6 +6,7 @@ function MountainCollection() {
         <div className="MountainCollection">
             <p>MountainCollection</p>
             <Mountain />
+            <Mountain />
         </div>
     )
 }

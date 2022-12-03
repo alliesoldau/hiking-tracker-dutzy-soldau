@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function PieChart() {
+
     return(
         <div className="PieChart">
             <p>Pie Chart</p>

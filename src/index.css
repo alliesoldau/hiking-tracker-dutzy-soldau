@@ -1,3 +1,12 @@
+/* Color Pallete */
+:root {
+  --lightbase: #606C38;
+  --darkbase: #283618;
+  --lightneutral: #FEFAE0;
+  --neutral: #DDA15E;
+  --darkneutral: #BC6C25;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,28 +22,28 @@ code {
 }
 
 .Header {
-  background-color: black;
-  color: white;
+  background-color: var(--darkbase);
+  color: var(--lightneutral);
 }
 
 .ChallengeSelector {
-  background-color: yellow;
+  background-color: var(--lightbase);
   height: 50%;
 }
 
 .Selector-Container {
-  background-color: white;
   margin: 20px;
   padding: 10px;
 }
 
 .Challenges-Container, .Mountain-Container {
-  background-color: blue;
+  background-color: var(--darkneutral);
   color: white;
+  border-radius: 10px;
 }
 
 .UserInputForm {
-  background-color: green;
+  background-color: var(--lightbase);
   color: white;
   display: flex;
   flex-direction: column;
@@ -43,18 +52,18 @@ code {
 }
 
 .UserInputDropDowns-Container {
-  background-color: pink;
   display: flex;
   flex-direction: column;
 }
 
 .Date-Container, .Buddies-Container, .Notes-Container, .Pics-Container {
-  background-color: orange;
+  background-color: var(--neutral);
   margin: 10px;
+  border-radius: 10px;
 }
 
 .GraphicalRepresentation {
-  background-color: purple;
+  background-color: var(--lightneutral);
   color: white;
   display: flex;
   flex-direction: column;
@@ -63,11 +72,12 @@ code {
 }
 
 .PieChartCollection {
-  background-color: blue;
+  background-color: var(--neutral);
   display: flex;
   margin: 20px;
   flex-grow: 2;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .Graphs-Container {
@@ -75,18 +85,20 @@ code {
 }
 
 .PieChart {
-  background-color: orange;
+  background-color: var(--lightbase);
   margin: 20px;
 }
 
 .HikeDetails {
-  background-color: red;
+  background-color: var(--darkbase);
   margin: 20px;
   flex-grow: 1;
+  border-radius: 10px;
 }
 
 .MountainCollection {
-  background-color: teal;
+  display: flex;
+  flex-direction: row;
   margin: 20px;
   flex-grow: 1;
 }
@@ -99,7 +111,6 @@ code {
 .App-container {
   display: flex;
   flex-direction: column;
-
 }
 
 .Body-Container {
@@ -119,5 +130,8 @@ code {
   width: 8vw;
   margin: 5px;
   text-align: center;
-  
 }
+
+
+
+/* https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */
