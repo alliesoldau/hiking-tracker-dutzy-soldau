@@ -3,9 +3,12 @@ import PieChart from './PieChart'
 
 function PieChartCollection() {
     return(
-        <div>
+        <div className="PieChartCollection">
             <p>PieChartCollection</p>
-            <PieChart />
+            <div className="Graphs-Container">
+                <PieChart />
+                <PieChart />
+            </div>
         </div>
     )
 }

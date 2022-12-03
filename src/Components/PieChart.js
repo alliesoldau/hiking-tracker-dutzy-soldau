@@ -2,7 +2,9 @@ import React from 'react';
 
 function PieChart() {
     return(
-        <p>Pie Chart</p>
+        <div className="PieChart">
+            <p>Pie Chart</p>
+        </div>
     )
 }
 

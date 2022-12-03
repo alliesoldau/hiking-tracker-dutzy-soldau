@@ -3,7 +3,7 @@ import Mountain from './Mountain'
 
 function MountainCollection() {
     return(
-        <div>
+        <div className="MountainCollection">
             <p>MountainCollection</p>
             <Mountain />
         </div>

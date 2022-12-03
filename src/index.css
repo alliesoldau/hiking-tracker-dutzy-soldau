@@ -13,5 +13,104 @@ code {
 }
 
 .Header {
+  background-color: black;
+  color: white;
+}
+
+.ChallengeSelector {
+  background-color: yellow;
+  height: 50%;
+}
+
+.Selector-Container {
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
+}
+
+.Challenges-Container, .Mountain-Container {
+  background-color: blue;
+  color: white;
+}
+
+.UserInputForm {
+  background-color: green;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  padding: 10px;
+}
+
+.UserInputDropDowns-Container {
   background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+
+.Date-Container, .Buddies-Container, .Notes-Container, .Pics-Container {
+  background-color: orange;
+  margin: 10px;
+}
+
+.GraphicalRepresentation {
+  background-color: purple;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  justify-content: space-evenly;
+}
+
+.PieChartCollection {
+  background-color: blue;
+  display: flex;
+  margin: 20px;
+  flex-grow: 2;
+  flex-direction: column;
+}
+
+.Graphs-Container {
+  display: flex;
+}
+
+.PieChart {
+  background-color: orange;
+  margin: 20px;
+}
+
+.HikeDetails {
+  background-color: red;
+  margin: 20px;
+  flex-grow: 1;
+}
+
+.MountainCollection {
+  background-color: teal;
+  margin: 20px;
+  flex-grow: 1;
+}
+
+.Mountain {
+  background-color: maroon;
+  margin: 20px;
+}
+
+.App-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Body-Container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.Data-Container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
 }

@@ -2,7 +2,9 @@ import React from 'react';
 
 function HikeDetails() {
     return(
-        <p>Hike Details</p>
+        <div className="HikeDetails">
+            <p>Hike Details</p>
+        </div>
     )
 }
 

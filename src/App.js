@@ -10,10 +10,16 @@ import GraphicalRepresentation from './Components/GraphicalRepresentation'
 function App() {
   return (
     <div className="App">
-      <Header />
-      <ChallengeSelector className="ChallengeSelector" />
-      <UserInputForm className="UserInputForm" />
-      <GraphicalRepresentation className="GraphicalRepresentation" />
+      <div className="App-container">
+        <Header />
+        <div className="Body-Container">
+          <GraphicalRepresentation />
+          <div className="Data-Container">
+            <ChallengeSelector />
+            <UserInputForm />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

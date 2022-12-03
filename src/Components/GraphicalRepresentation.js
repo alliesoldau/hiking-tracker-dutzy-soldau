@@ -5,7 +5,7 @@ import MountainCollection from './MountainCollection';
 
 function GraphicalRepresenation() {
     return(
-        <div>
+        <div className="GraphicalRepresentation">
             <p>Graphical Representation</p>
             <PieChartCollection />
             <HikeDetails />

@@ -2,7 +2,9 @@ import React from 'react';
 
 function Mountain() {
     return(
-        <p>Mountain</p>
+        <div className="Mountain">
+            <p>Mountain</p>
+        </div>
     )
 }
 
