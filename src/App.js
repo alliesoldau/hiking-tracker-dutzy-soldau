@@ -1,4 +1,8 @@
 import './App.css';
+import Header from './Components/Header'
+import ChallengeSelector from './Components/ChallengeSelector'
+import UserInputForm from './Components/UserInputForm'
+import GraphicalRepresentation from './Components/GraphicalRepresentation'
 
 // https://github.com/huychau/json-server-multiple-files
 // --> reference for having multiple .json files
@@ -6,20 +10,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img height="1000px" width="1000px" src="https://photos.smugmug.com/photos/i-6tdg72J/0/X2/i-6tdg72J-X2.jpg" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and do a jig.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Poop
-        </a>
-      </header>
+      <Header />
+      <ChallengeSelector className="ChallengeSelector" />
+      <UserInputForm className="UserInputForm" />
+      <GraphicalRepresentation className="GraphicalRepresentation" />
     </div>
   );
 }
