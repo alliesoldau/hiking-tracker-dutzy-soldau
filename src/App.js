@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="https://photos.smugmug.com/photos/i-6tdg72J/0/X2/i-6tdg72J-X2.jpg" className="App-logo" alt="logo" />
+        <img height="1000px" width="1000px" src="https://photos.smugmug.com/photos/i-6tdg72J/0/X2/i-6tdg72J-X2.jpg" className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and do a jig.
         </p>
