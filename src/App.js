@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 // https://github.com/huychau/json-server-multiple-files
@@ -8,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="https://photos.smugmug.com/photos/i-6tdg72J/0/X2/i-6tdg72J-X2.jpg" className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and do a jig.
         </p>
         <a
           className="App-link"
@@ -18,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Poop
         </a>
       </header>
     </div>
