@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+// https://github.com/huychau/json-server-multiple-files
+// --> reference for having multiple .json files
+
 function App() {
   return (
     <div className="App">
