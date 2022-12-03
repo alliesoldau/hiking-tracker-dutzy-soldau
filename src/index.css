@@ -114,3 +114,10 @@ code {
   height: 100vh;
   width: 50vw;
 }
+
+.button {
+  width: 8vw;
+  margin: 5px;
+  text-align: center;
+  
+}
