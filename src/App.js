@@ -12,7 +12,7 @@ function App() {
   const [rawData, setRawData] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3000/challenges")
+    fetch("http://localhost:3001/challenges")
     .then((response) => response.json())
     .then((data) => setRawData(data))
   }, [])

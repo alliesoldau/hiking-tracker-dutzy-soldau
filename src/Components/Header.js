@@ -4,7 +4,6 @@ function Header() {
     return(
         <div className="Header">
             <p>Hiking Tracker</p>
-            <p>Login</p>
         </div>
     )
 }

@@ -47,16 +47,21 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountai
         })
     }    
 
+    // TO DO: Make it so the challenges populate with nothing on page load
+    // and make it so you can click on the mountains without first having 
+    // to click off of the first mountain that renders in the list
+
     return(
         <div className="ChallengeSelector">
             <div className="Selector-Container">
                 <div className="Challenges-Container">
                     <label>Select a Challenge:</label>
-                    <select 
+                    <select
                         onChange={handleChallengeSelection}
                         placeholder='Select Challenge...' 
                         name='challenge' 
                         id='challenge'>
+                            <option className="bootOption">🥾🥾⛰️</option>
                             {challengesDD}
                     </select>
                 </div>

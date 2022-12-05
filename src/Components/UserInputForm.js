@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
-function UserInputForm() {
+function UserInputForm({rawData, formData, setFormData}) {
+ 
+ function handleChange(e) {
+        const name = e.target.name
+        const value = e.target.value
+        // console.log(e.target.name)
+        // console.log(e.target.value)
+        setFormData({...formData, [name]: value,})
+    } 
 
-    const [formData, setFormData] = useState({
-        challenge: "",
-        mountain: "",
-        date: "",
-        buddies: [""],
-        notes: "",
-        image: "",
-
-    // function handleChange(e) {
-    //     const name = e.target.name
-    //     const value = e.target.value
-    //     
-    //     setFormData({...formData, [name]: value,})
-    // } 
-
- })
 
     return(
         <div className="UserInputForm">
@@ -25,7 +17,8 @@ function UserInputForm() {
                     <div className="Date-Container">
                         <label>Date: </label>
                         <input 
-                            /*onChange={handleChange}*/
+                            value={formData.date}
+                            onChange={handleChange}
                             type="date" 
                             className="date" 
                             name="date" />
@@ -33,7 +26,8 @@ function UserInputForm() {
                     <div className="Buddies-Container">
                         <label>Buddies: </label>
                         <input 
-                            /*onChange={handleChange}*/
+                            value={formData.buddies}
+                            onChange={handleChange}
                             placeholder='Who did you hike with?..'  
                             type="text" 
                             className="buddies"  
@@ -42,21 +36,22 @@ function UserInputForm() {
                     <div className="Notes-Container">
                         <label>Notes: </label>
                         <textarea 
-                            /*onChange={handleChange}*/
+                            value={formData.notes}
+                            onChange={handleChange}
                             placeholder='Tell us about your hike..' 
                             className="notes"  
                             name="notes" 
                             rows="4" cols="55">
                         </textarea>
                     </div>
-                    <div className="Pics-Container">
+                    {/* <div className="Pics-Container">
                         <label>Upload A Photo: </label>
                         <input 
-                            /*onChange={handleChange}*/
+                        onChange={handleChange}
                             type="file" 
                             className="image" 
                             name="image"/>
-                    </div>
+                    </div> */}
                 </div>
             </form>
         </div>

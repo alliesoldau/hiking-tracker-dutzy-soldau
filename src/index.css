@@ -56,6 +56,11 @@ select {
   border-radius: 10px;
 }
 
+.bootOption {
+  justify-content: center;
+  text-align: center;
+}
+
 .hikeDetails p {
   color: white;
   font-size: 1em;

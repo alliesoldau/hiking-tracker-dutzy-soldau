@@ -14,13 +14,11 @@ function DataContainer({ rawData }) {
         difficulty: 0
     })
     const [formData, setFormData] = useState({
-        challenge: "",
-        mountain: "",
         date: "",
-        buddies: [""],
+        buddies: "",
         notes: "",
-        image: "",
     })
+
     // TO DO: Find a way to not hard code the array indexes or get them more systematically
     const indexArray = {
         "ADK46": 0,
@@ -30,6 +28,12 @@ function DataContainer({ rawData }) {
         "Saranac 6": 4
     }
 
+    function handleSubmit(e) {
+        e.preventDefault()
+        const completedHike = {...mountainData, ...formData}
+        // console.log(`completed hike: ${mountainData}`)
+        
+    }
     return(
         <div className="Data-Container">
             <ChallengeSelector
@@ -48,11 +52,12 @@ function DataContainer({ rawData }) {
                 <p><b>Difficulty:</b> {mountainData.difficulty}</p>
             </div>  
             <UserInputForm 
+                formData={formData}
+                setFormData={setFormData}
                 rawData={rawData}
-                // TO DO KEVIN: Add in the props needed from UserInputFor
             />
             <div>
-                <button type='submit'>Submit Form</button>
+                <button onClick={handleSubmit} type='submit'>Submit Form</button>
             </div>
         </div>
     )
