@@ -780,6 +780,140 @@
                     "difficulty": 3
                 }
             ]
+        },
+        {
+            "id": 4,
+            "name": "Lake Placid 9",
+            "totalPeaks": 9,
+            "mountains": [
+                {
+                    "name": "Cobble Hill",
+                    "elevation": 2332,
+                    "ascent": 495,
+                    "length": 2.2,
+                    "typicalTime": 1.2,
+                    "difficulty": 1
+                },
+                {
+                    "name": "Jo",
+                    "elevation": 2876,
+                    "ascent": 698,
+                    "length": 2.6,
+                    "typicalTime": 1.5,
+                    "difficulty": 1
+                },
+                {
+                    "name": "Baxter",
+                    "elevation": 2440,
+                    "ascent": 790,
+                    "length": 2.4,
+                    "typicalTime": 1.7,
+                    "difficulty": 1
+                },
+                {
+                    "name": "Van Hoevenberg",
+                    "elevation": 2940,
+                    "ascent": 892,
+                    "length": 4.4,
+                    "typicalTime": 2.2,
+                    "difficulty": 2
+                },
+                {
+                    "name": "Big Crow",
+                    "elevation": 2815,
+                    "ascent": 570,
+                    "length": 1.4,
+                    "typicalTime": 1,
+                    "difficulty": 1
+                },
+                {
+                    "name": "Bear Den",
+                    "elevation": 2650,
+                    "ascent": 1683,
+                    "length": 4.5,
+                    "typicalTime": 3.2,
+                    "difficulty": 3
+                },
+                {
+                    "name": "Pitchoff",
+                    "elevation": 3500,
+                    "ascent": 2132,
+                    "length": 5.2,
+                    "typicalTime": 4.2,
+                    "difficulty": 4
+                },
+                {
+                    "name": "Catamount",
+                    "elevation": 3169,
+                    "ascent": 1584,
+                    "length": 3.6,
+                    "typicalTime": 3,
+                    "difficulty": 3
+                },
+                {
+                    "name": "Hurricane",
+                    "elevation": 3678,
+                    "ascent": 1515,
+                    "length": 5.8,
+                    "typicalTime": 3.3,
+                    "difficulty": 4
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Saranac 6",
+            "totalPeaks": 6,
+            "mountains": [
+                {
+                    "name": "McKenzie",
+                    "elevation": 3822,
+                    "ascent": 2221,
+                    "length": 6.3,
+                    "typicalTime": 4,
+                    "difficulty": 5
+                },
+                {
+                    "name": "Ampersand",
+                    "elevation": 3353,
+                    "ascent": 1775,
+                    "length": 5.4,
+                    "typicalTime": 3.5,
+                    "difficulty": 3
+                },
+                {
+                    "name": "Scarface",
+                    "elevation": 3054,
+                    "ascent": 1480,
+                    "length": 6.8,
+                    "typicalTime": 3.5,
+                    "difficulty": 2
+                },
+                {
+                    "name": "Haystack",
+                    "elevation": 2864,
+                    "ascent": 954,
+                    "length": 5.3,
+                    "typicalTime": 2.5,
+                    "difficulty": 1
+                },
+                {
+                    "name": "St. Regis",
+                    "elevation": 2874,
+                    "ascent": 1266,
+                    "length": 6.6,
+                    "typicalTime": 3.5,
+                    "difficulty": 2
+                },
+                {
+                    "name": "Baker",
+                    "elevation": 2452,
+                    "ascent": 884,
+                    "length": 1.8,
+                    "typicalTime": 1.3,
+                    "difficulty": 2
+                }
+            ]
         }
     ]
 }
