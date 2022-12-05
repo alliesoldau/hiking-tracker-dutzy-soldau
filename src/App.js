@@ -1,8 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './Components/Header'
-import ChallengeSelector from './Components/ChallengeSelector'
-import UserInputForm from './Components/UserInputForm'
+import DataContainer from './Components/DataContainer'
 import GraphicalRepresentation from './Components/GraphicalRepresentation'
 
 // https://github.com/huychau/json-server-multiple-files
@@ -26,7 +25,7 @@ function App() {
         <Header />
         <div className="Body-Container">
           <GraphicalRepresentation />
-            <ChallengeSelector 
+            <DataContainer 
               rawData={rawData}
             />
         </div>

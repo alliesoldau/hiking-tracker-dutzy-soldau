@@ -24,26 +24,46 @@ code {
 .Header {
   background-color: var(--darkbase);
   color: var(--lightneutral);
+  height: 10vh;
 }
 
 .ChallengeSelector {
-  background-color: var(--lightbase);
-  height: 50%;
+  color: white;
+  font-weight: bold;
 }
 
 .Selector-Container {
-  margin: 20px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Challenges-Container, .Mountain-Container {
   background-color: var(--lightneutral);
   color: black;
   border-radius: 10px;
+  margin: 20px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+select {
+  width: 50%;
+  align-self: center;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+.hikeDetails p {
+  color: white;
+  font-size: 1em;
+  margin: 2px;
 }
 
 .UserInputForm {
-  background-color: var(--lightbase);
+  font-weight: bold;
   color: white;
   display: flex;
   flex-direction: column;
@@ -63,6 +83,38 @@ code {
   border-radius: 10px;
 }
 
+input.date, input.buddies {
+  width: 90%;
+  align-self: center;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: pink;
+  border-radius: 10px;
+  font-weight: bold;
+  border-color: white;
+  height: 3vh;
+}
+
+textarea {
+  width: 90%;
+  align-self: center;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+.Pics-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Pics-Container label, input {
+  margin: 5px;
+}
+
 .GraphicalRepresentation {
   background-color: var(--lightneutral);
   color: white;
@@ -70,6 +122,7 @@ code {
   flex-direction: column;
   width: 50vw;
   justify-content: space-evenly;
+  height: 90vh;
 }
 
 .PieChartCollection {
@@ -83,11 +136,15 @@ code {
 
 .Graphs-Container {
   display: flex;
+  justify-content: center;
 }
 
 .PieChart {
   background-color: var(--lightbase);
   margin: 20px;
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
 }
 
 .HikeDetails {
@@ -112,19 +169,21 @@ code {
 .App-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  font-family: 'Avenir';
 }
 
 .Body-Container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
 }
 
 .Data-Container {
+  background-color: var(--lightbase);
   display: flex;
   flex-direction: column;
-  height: 100vh;
   width: 50vw;
+  height: 90vh;
 }
 
 .button {
