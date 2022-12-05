@@ -18,7 +18,7 @@ function App() {
     .then((data) => setRawData(data))
   }, [])
 
-  console.log(rawData)
+  
 
   return (
     <div className="App">
@@ -27,7 +27,9 @@ function App() {
         <div className="Body-Container">
           <GraphicalRepresentation />
           <div className="Data-Container">
-            <ChallengeSelector />
+            <ChallengeSelector 
+              rawData={rawData}
+            />
             <UserInputForm />
           </div>
         </div>

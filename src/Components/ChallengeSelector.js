@@ -1,7 +1,20 @@
-import React, { } from 'react';
+import React, { useState } from 'react';
 import ChallengesDD from './ChallengesDD';
+import MountainsDD from './MountainsDD';
 
 function ChallengeSelector({ rawData }) {
+
+    const [selectedChallenge, setSelectedChallenge] = useState("")
+    const [mountainsArray, setMountainsArray] = useState([])
+
+    // TO DO: Find a way to not hard code this
+    const indexArray = {
+        "ADK46": 0,
+        "Catskill 3500": 1,
+        "Lake George 12ster": 2,
+        "Lake Placid 9": 3,
+        "Saranac 6": 4
+    }
 
     const challengesDD = rawData.map((challenge) => {
         return(
@@ -14,8 +27,21 @@ function ChallengeSelector({ rawData }) {
 
     function handleChallengeSelection(e) {
         e.preventDefault()
-        console.log(e.target.value)
+        const index = indexArray[`${e.target.value}`]
+        setSelectedChallenge(e.target.value)
+        setMountainsArray(rawData[index].mountains)
     }
+
+    const mountainsDD = mountainsArray.map((mountain) => {
+        return(
+            <MountainsDD
+                key={mountain.name}
+                mountain={mountain}
+            />
+        )
+    })
+
+
 
     return(
         <div className="ChallengeSelector">
@@ -33,7 +59,7 @@ function ChallengeSelector({ rawData }) {
                 <div className="Mountain-Container">
                     <label>Select a Mountain:</label><br/>
                     <select  placeholder='Select Mountain...' name='mountain' id='mountain'>
-                        {/* {mountainNames} */}
+                        {mountainsDD}
                         {/* we should add a new component to map through the mountains to create option tags -
                         instead of individually creating 70+ option tags for this  */}
                     </select>

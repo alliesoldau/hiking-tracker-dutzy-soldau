@@ -1,6 +1,7 @@
 import React from 'react';
 
-function ChallengesDD({ challenge }) {
+function ChallengesDD({ challenge}) {
+
     return(
         <option>{challenge.name}</option>
     )
