@@ -14,6 +14,15 @@ function ChallengeSelector({ rawData }) {
     const [typicalTime, setTypicalTime] = useState(0)
     const [difficulty, setDifficulty] = useState(0)
 
+    const [formData, setFormData] = useState({
+        challenge: "",
+        mountain: "",
+        date: "",
+        buddies: [""],
+        notes: "",
+        image: "",
+    })
+
     // TO DO: Find a way to not hard code the array indexes or get them more systematically
     const indexArray = {
         "ADK46": 0,
@@ -73,6 +82,7 @@ function ChallengeSelector({ rawData }) {
     
 
     return(
+        <div className="Data-Container">
         <div className="ChallengeSelector">
             <p>Challenge Selector</p>
             <div className="Selector-Container">
@@ -95,15 +105,62 @@ function ChallengeSelector({ rawData }) {
                         id='mountain'>
                             {mountainsDD}
                     </select>
-                    <p>Elevation: </p>
-                    <p>Ascent: </p>
-                    <p>Length: </p>
-                    <p>Time: </p>
-                    <p>Difficulty: </p>
+                </div>
+                <div>
+                    <p>Elevation: {elevation}</p>
+                    <p>Ascent: {ascent}</p>
+                    <p>Length: {length}</p>
+                    <p>Time: {typicalTime}</p>
+                    <p>Difficulty: {difficulty}</p>
                 </div>
             </div>
         </div>
-        
+        <div className="UserInputForm">
+        <form>
+            <span>User Input Form</span>
+            <div className="UserInputDropDowns-Container">
+                <div className="Date-Container">
+                    <label>Date: </label><br/>
+                    <input 
+                        /*onChange={handleChange}*/
+                        type="date" 
+                        id="date" 
+                        name="date" />
+                </div>
+                <div className="Buddies-Container">
+                    <label>Buddies: </label><br/>
+                    <input 
+                        /*onChange={handleChange}*/
+                        placeholder='Who did you hike with?..'  
+                        type="text" 
+                        id="buddies"  
+                        name="buddies" />
+                </div>
+                <div className="Notes-Container">
+                    <label>Notes: </label><br/>
+                    <textarea 
+                        /*onChange={handleChange}*/
+                        placeholder='Tell us about your hike..' 
+                        id="notes"  
+                        name="notes" 
+                        rows="4" cols="55">
+                    </textarea>
+                </div>
+                <div className="Pics-Container">
+                    <label>Upload A Photo: </label><br/>
+                    <input 
+                        /*onChange={handleChange}*/
+                        type="file" 
+                        id="image" 
+                        name="image"/>
+                </div>
+                <div>
+                 <button type='submit'>Submit Form</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
     )
 }
 export default ChallengeSelector;

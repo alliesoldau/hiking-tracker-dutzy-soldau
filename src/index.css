@@ -37,8 +37,8 @@ code {
 }
 
 .Challenges-Container, .Mountain-Container {
-  background-color: var(--darkneutral);
-  color: white;
+  background-color: var(--lightneutral);
+  color: black;
   border-radius: 10px;
 }
 
@@ -57,7 +57,8 @@ code {
 }
 
 .Date-Container, .Buddies-Container, .Notes-Container, .Pics-Container {
-  background-color: var(--neutral);
+  background-color: var(--lightneutral);
+  color: black;
   margin: 10px;
   border-radius: 10px;
 }

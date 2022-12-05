@@ -26,12 +26,9 @@ function App() {
         <Header />
         <div className="Body-Container">
           <GraphicalRepresentation />
-          <div className="Data-Container">
             <ChallengeSelector 
               rawData={rawData}
             />
-            <UserInputForm />
-          </div>
         </div>
       </div>
     </div>
