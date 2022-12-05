@@ -36,6 +36,7 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountai
             if (mount.name === mountain) {
                 setMountainData({
                     ...mountainData,
+                    name: mount.name,
                     elevation: mount.elevation,
                     ascent: mount.ascent,
                     length: mount.length,
