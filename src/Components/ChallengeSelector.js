@@ -45,12 +45,12 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountai
             }
         })
     }    
-    
+
     return(
         <div className="ChallengeSelector">
             <div className="Selector-Container">
                 <div className="Challenges-Container">
-                    <label>Select a Challenge:</label><br/>
+                    <label>Select a Challenge:</label>
                     <select 
                         onChange={handleChallengeSelection}
                         placeholder='Select Challenge...' 
@@ -60,7 +60,7 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountai
                     </select>
                 </div>
                 <div className="Mountain-Container">
-                    <label>Select a Mountain:</label><br/>
+                    <label>Select a Mountain:</label>
                     <select 
                         onChange={handleMountainSelection}
                         placeholder='Select Mountain...' 

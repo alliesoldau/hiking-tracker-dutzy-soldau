@@ -5,13 +5,6 @@ import UserInputForm from './UserInputForm'
 function DataContainer({ rawData }) {
 
     const [mountainsArray, setMountainsArray] = useState([])
-    // const [name, setName] = useState("")
-    // const [elevation, setElevation] = useState(0)
-    // const [ascent, setAscent] = useState(0)
-    // const [length, setLength] = useState(0)
-    // const [typicalTime, setTypicalTime] = useState(0)
-    // const [difficulty, setDifficulty] = useState(0)
-
     const [mountainData, setMountainData] = useState({
         name: "",
         elevation: 0,
@@ -20,7 +13,6 @@ function DataContainer({ rawData }) {
         typicalTime: 0,
         difficulty: 0
     })
-
     const [formData, setFormData] = useState({
         challenge: "",
         mountain: "",
@@ -29,7 +21,6 @@ function DataContainer({ rawData }) {
         notes: "",
         image: "",
     })
-
     // TO DO: Find a way to not hard code the array indexes or get them more systematically
     const indexArray = {
         "ADK46": 0,
@@ -50,11 +41,11 @@ function DataContainer({ rawData }) {
                 indexArray={indexArray}
             />
             <div className="hikeDetails">
-                <p>Elevation: {mountainData.elevation}</p>
-                <p>Ascent: {mountainData.ascent}</p>
-                <p>Length: {mountainData.length}</p>
-                <p>Time: {mountainData.typicalTime}</p>
-                <p>Difficulty: {mountainData.difficulty}</p>
+                <p><b>Elevation:</b> {mountainData.elevation}</p>
+                <p><b>Ascent:</b> {mountainData.ascent}</p>
+                <p><b>Length:</b> {mountainData.length}</p>
+                <p><b>Time:</b> {mountainData.typicalTime}</p>
+                <p><b>Difficulty:</b> {mountainData.difficulty}</p>
             </div>  
             <UserInputForm 
                 rawData={rawData}

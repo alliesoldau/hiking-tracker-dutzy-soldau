@@ -23,38 +23,38 @@ function UserInputForm() {
             <form>
                 <div className="UserInputDropDowns-Container">
                     <div className="Date-Container">
-                        <label>Date: </label><br/>
+                        <label>Date: </label>
                         <input 
                             /*onChange={handleChange}*/
                             type="date" 
-                            id="date" 
+                            className="date" 
                             name="date" />
                     </div>
                     <div className="Buddies-Container">
-                        <label>Buddies: </label><br/>
+                        <label>Buddies: </label>
                         <input 
                             /*onChange={handleChange}*/
                             placeholder='Who did you hike with?..'  
                             type="text" 
-                            id="buddies"  
+                            className="buddies"  
                             name="buddies" />
                     </div>
                     <div className="Notes-Container">
-                        <label>Notes: </label><br/>
+                        <label>Notes: </label>
                         <textarea 
                             /*onChange={handleChange}*/
                             placeholder='Tell us about your hike..' 
-                            id="notes"  
+                            className="notes"  
                             name="notes" 
                             rows="4" cols="55">
                         </textarea>
                     </div>
                     <div className="Pics-Container">
-                        <label>Upload A Photo: </label><br/>
+                        <label>Upload A Photo: </label>
                         <input 
                             /*onChange={handleChange}*/
                             type="file" 
-                            id="image" 
+                            className="image" 
                             name="image"/>
                     </div>
                 </div>
