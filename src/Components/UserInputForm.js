@@ -21,7 +21,6 @@ function UserInputForm() {
     return(
         <div className="UserInputForm">
             <form>
-                <span>User Input Form</span>
                 <div className="UserInputDropDowns-Container">
                     <div className="Date-Container">
                         <label>Date: </label><br/>
@@ -57,9 +56,6 @@ function UserInputForm() {
                             type="file" 
                             id="image" 
                             name="image"/>
-                    </div>
-                    <div>
-                     <button type='submit'>Submit Form</button>
                     </div>
                 </div>
             </form>

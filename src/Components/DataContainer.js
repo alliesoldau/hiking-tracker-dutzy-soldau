@@ -4,14 +4,22 @@ import UserInputForm from './UserInputForm'
 
 function DataContainer({ rawData }) {
 
-    const [selectedChallenge, setSelectedChallenge] = useState("")
     const [mountainsArray, setMountainsArray] = useState([])
-    const [name, setName] = useState("")
-    const [elevation, setElevation] = useState(0)
-    const [ascent, setAscent] = useState(0)
-    const [length, setLength] = useState(0)
-    const [typicalTime, setTypicalTime] = useState(0)
-    const [difficulty, setDifficulty] = useState(0)
+    // const [name, setName] = useState("")
+    // const [elevation, setElevation] = useState(0)
+    // const [ascent, setAscent] = useState(0)
+    // const [length, setLength] = useState(0)
+    // const [typicalTime, setTypicalTime] = useState(0)
+    // const [difficulty, setDifficulty] = useState(0)
+
+    const [mountainData, setMountainData] = useState({
+        name: "",
+        elevation: 0,
+        ascent: 0,
+        length: 0,
+        typicalTime: 0,
+        difficulty: 0
+    })
 
     const [formData, setFormData] = useState({
         challenge: "",
@@ -37,26 +45,24 @@ function DataContainer({ rawData }) {
                 rawData={rawData}
                 mountainsArray={mountainsArray}
                 setMountainsArray={setMountainsArray}
-                setName={setName}
-                setElevation={setElevation}
-                setAscent={setAscent}
-                setLength={setLength}
-                setTypicalTime={setTypicalTime}
-                setDifficulty={setDifficulty}
+                mountainData={mountainData}
+                setMountainData={setMountainData}
                 indexArray={indexArray}
             />
             <div className="hikeDetails">
-                <p>Elevation: {elevation}</p>
-                <p>Ascent: {ascent}</p>
-                <p>Length: {length}</p>
-                <p>Time: {typicalTime}</p>
-                <p>Difficulty: {difficulty}</p>
+                <p>Elevation: {mountainData.elevation}</p>
+                <p>Ascent: {mountainData.ascent}</p>
+                <p>Length: {mountainData.length}</p>
+                <p>Time: {mountainData.typicalTime}</p>
+                <p>Difficulty: {mountainData.difficulty}</p>
             </div>  
             <UserInputForm 
                 rawData={rawData}
                 // TO DO KEVIN: Add in the props needed from UserInputFor
             />
-      
+            <div>
+                <button type='submit'>Submit Form</button>
+            </div>
         </div>
     )
 }

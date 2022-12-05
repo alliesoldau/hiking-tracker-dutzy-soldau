@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ChallengesDD from './ChallengesDD';
 import MountainsDD from './MountainsDD';
 
-function ChallengeSelector({ rawData, setSelectedChallenge, setMountainsArray, mountainsArray, setName, setElevation, setAscent, setLength, setTypicalTime, setDifficulty, indexArray }) {
+function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountainData, setMountainData, indexArray }) {
 
     const challengesDD = rawData.map((challenge) => {
         return(
@@ -17,7 +17,6 @@ function ChallengeSelector({ rawData, setSelectedChallenge, setMountainsArray, m
         e.preventDefault()
         const index = indexArray[`${e.target.value}`]
         // TO DO: get ride of selectedChallenge if I end up not needing it
-        setSelectedChallenge(e.target.value)
         setMountainsArray(rawData[index].mountains)
     }
 
@@ -35,19 +34,20 @@ function ChallengeSelector({ rawData, setSelectedChallenge, setMountainsArray, m
         const mountain = e.target.value
         const mountainInfo = mountainsArray.map((mount) => {
             if (mount.name === mountain) {
-                setName(mount.name)
-                setElevation(mount.elevation)
-                setAscent(mount.ascent)
-                setLength(mount.length)
-                setTypicalTime(mount.typicalTime)
-                setDifficulty(mount.difficulty)
+                setMountainData({
+                    ...mountainData,
+                    elevation: mount.elevation,
+                    ascent: mount.ascent,
+                    length: mount.length,
+                    typicalTime: mount.typicalTime,
+                    difficulty: mount.difficulty,
+                })
             }
         })
     }    
     
     return(
         <div className="ChallengeSelector">
-            <p>Challenge Selector</p>
             <div className="Selector-Container">
                 <div className="Challenges-Container">
                     <label>Select a Challenge:</label><br/>
