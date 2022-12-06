@@ -4,20 +4,33 @@ import Header from './Components/Header'
 import DataContainer from './Components/DataContainer'
 import GraphicalRepresentation from './Components/GraphicalRepresentation'
 
-// https://github.com/huychau/json-server-multiple-files
-// --> reference for having multiple .json files
+// HOW TO START PORTS:  json-server --watch ./data/index.js --port 3000
 
 function App() {
 
+  // IMPORTANT TO DO: How to ensure the URL is the same every time?
+  const baseChallengesURL = "http://localhost:3000/SourceData"
+  const baseUserDataURL = "http://localhost:3000/UserData"
+
   const [rawData, setRawData] = useState([])
+  const [userData, setUserData] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3001/challenges")
+    fetch(baseChallengesURL)
     .then((response) => response.json())
-    .then((data) => setRawData(data))
+    .then((data) => setRawData(data.challenges))
+    console.log(rawData)
   }, [])
 
-  
+  // IMPORTANT TO DO: I think we need to specify which port this
+  // is gonna run through so that the fetch request works more consistently? 
+  useEffect(() => {
+    fetch(baseUserDataURL)
+    .then((response) => response.json())
+    .then((data) => setUserData(data))
+  }, [])
+
+  console.log(userData)
 
   return (
     <div className="App">

@@ -1,0 +1,11 @@
+{
+   "name": "testName",
+   "elevation": "testElevation",
+   "ascent": "testAscent",
+   "length": "testLength",
+   "typicalTime": "testTypeTime",
+   "difficulty": "testDifficulty",
+   "date": "11-11-1111",
+   "buddies": "testBuddies",
+   "notes": "testNotes"
+}

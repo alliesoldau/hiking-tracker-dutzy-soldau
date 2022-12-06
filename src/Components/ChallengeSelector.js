@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ChallengesDD from './ChallengesDD';
 import MountainsDD from './MountainsDD';
 
