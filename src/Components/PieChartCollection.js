@@ -11,6 +11,10 @@ function PieChartCollection({ userData }) {
     const [LP9completedHikes, setLP9completedHikes] = useState([])
     const [SL6completedHikes, setSL6completedHikes] = useState([])
 
+    // TO DO: Map through the mountain arrays and make the mountains appear
+    // according to their correct size
+    console.log(ADK46completedHikes)
+
     // TO DO: Prohibit a user from inputting a mountain more than once
 
     useEffect(() => {
