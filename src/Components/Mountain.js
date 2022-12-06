@@ -1,16 +1,17 @@
 import React from 'react';
 
-function Mountain({ mtn }) {
+function Mountain({ mtn, minElevation }) {
 
     // some funky math to exagerate the height difference
-    const adjustedElevation = ((((mtn.elevation) / 100) -20) * 3);
+    const elevation = mtn.elevation
+    const exageratedElevation = (((elevation - minElevation+100))/2)
 
     const triangleHeightValue = {
         width: "0",
         height: "0",
         border: `30px solid transparent`,
         borderTop: "0",
-        borderBottom: `${adjustedElevation}px solid black`,
+        borderBottom: `${exageratedElevation}px solid #5C4033`,
     }
 
     return(

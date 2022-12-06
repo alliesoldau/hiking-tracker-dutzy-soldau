@@ -1046,6 +1046,19 @@
       "buddies": "sdf",
       "notes": "sdf",
       "id": 45
+    },
+    {
+      "name": "Nippletop",
+      "challengeName": "ADK46",
+      "elevation": 4620,
+      "ascent": 4050,
+      "length": 12.6,
+      "typicalTime": 10,
+      "difficulty": 5,
+      "date": "2022-12-09",
+      "buddies": "sdf",
+      "notes": "sdfgsdfg",
+      "id": 46
     }
   ]
 }
