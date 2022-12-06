@@ -19,7 +19,7 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
         notes: "",
     })
 
-    console.log(formData)
+    // console.log(formData)
 
     // TO DO: Find a way to not hard code the array indexes or get them more systematically
     const indexArray = {
@@ -30,18 +30,16 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
         "Saranac 6": 4
     }
 
-    // console.log(`userDataURL: ${userDataURL}`)
-
     function handleSubmit() {
-        // const completedHike = {...mountainData, ...formData}
-        // console.log(`completed hike: ${mountainData}`)
-        fetch("http://localhost:6001/userData", {
+        const completedHike = {...mountainData, ...formData}
+        console.log(`completed hike: ${mountainData}`)
+        fetch(userDataURL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(completedHike)
         })
         .then((response) => response.json())
         .then((data) => console.log(data))

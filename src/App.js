@@ -26,6 +26,8 @@ function App() {
     })
   }, [])
 
+  // console.table(rawData)
+
   useEffect(() => {
     fetch(userDataURL)
     .then((response) => response.json())
@@ -33,14 +35,16 @@ function App() {
       setUserData(data)
     })
   }, [])
-  console.log(`userData: ${userData}`)
+
 
   return (
     <div className="App">
       <div className="App-container">
         <Header />
         <div className="Body-Container">
-          <GraphicalRepresentation />
+          <GraphicalRepresentation
+            userData={userData} 
+          />
             <DataContainer 
               rawData={rawData}
               challengesURL={challengesURL}

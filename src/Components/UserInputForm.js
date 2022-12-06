@@ -4,8 +4,6 @@ function UserInputForm({rawData, formData, setFormData}) {
  function handleChange(e) {
         const name = e.target.name
         const value = e.target.value
-        // console.log(e.target.name)
-        // console.log(e.target.value)
         setFormData({...formData, [name]: value,})
     } 
 

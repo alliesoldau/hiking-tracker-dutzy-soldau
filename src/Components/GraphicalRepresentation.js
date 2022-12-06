@@ -3,10 +3,12 @@ import PieChartCollection from './PieChartCollection';
 import HikeDetails from './HikeDetails';
 import MountainCollection from './MountainCollection';
 
-function GraphicalRepresenation() {
+function GraphicalRepresenation({ userData }) {
+
+    console.table(userData)
+
     return(
         <div className="GraphicalRepresentation">
-            <p>Graphical Representation</p>
             <PieChartCollection />
             <HikeDetails />
             <MountainCollection />

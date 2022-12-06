@@ -930,10 +930,40 @@
       "notes": "testNotes"
     },
     {
-      "date": "2022-11-30",
-      "buddies": "dfgh",
-      "notes": "dfghdfgh",
+      "name": "Sleeping Beauty",
+      "elevation": 2347,
+      "ascent": 1437,
+      "length": 4.7,
+      "typicalTime": 3,
+      "difficulty": 2,
+      "date": "2022-11-29",
+      "buddies": "sdf",
+      "notes": "sdf",
       "id": 2
+    },
+    {
+      "name": "Fivemile",
+      "elevation": 2256,
+      "ascent": 1228,
+      "length": 8.3,
+      "typicalTime": 5,
+      "difficulty": 1,
+      "date": "2022-12-20",
+      "buddies": "asd",
+      "notes": "asd",
+      "id": 3
+    },
+    {
+      "name": "Bear Den",
+      "elevation": 2650,
+      "ascent": 1683,
+      "length": 4.5,
+      "typicalTime": 3.2,
+      "difficulty": 3,
+      "date": "2022-12-22",
+      "buddies": "qwerqwer",
+      "notes": "qwerqwerqwer",
+      "id": 4
     }
   ]
 }
