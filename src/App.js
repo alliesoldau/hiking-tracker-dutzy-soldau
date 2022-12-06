@@ -13,8 +13,6 @@ function App() {
   const challengesURL = baseURL + "challenges"
   const userDataURL = baseURL + "userData"
 
-  // IMPORTANT TO DO: How to ensure the URL is the same every time?
-
   const [rawData, setRawData] = useState([])
   const [userData, setUserData] = useState([])
 
@@ -25,8 +23,6 @@ function App() {
       setRawData(data)
     })
   }, [])
-
-  // console.table(rawData)
 
   useEffect(() => {
     fetch(userDataURL)

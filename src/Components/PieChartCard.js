@@ -3,7 +3,7 @@ import { PieChart } from 'react-minimal-pie-chart';
 
 
 
-function PieChartCard() {
+function PieChartCard({ challenge }) {
 
     // TO DO: Recieve the user data from piechartcollection
     // use this data to fill in the values of the pie chart
@@ -14,8 +14,8 @@ function PieChartCard() {
         <div className="PieChart">
             <PieChart className="pieChart"
                 data={[
-                    { title: 'Complete', value: 10, color: '#283618'},
-                    { title: 'To Do', value: 15, color: '#606C38' },
+                    { title: 'Complete', value: challenge.completed, color: '#283618'},
+                    { title: 'To Do', value: challenge.total, color: '#606C38' },
                 ]}
                 animate
                 animationDuration={500}

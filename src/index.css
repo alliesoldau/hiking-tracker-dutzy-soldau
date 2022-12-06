@@ -125,7 +125,7 @@ textarea {
   color: white;
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 70vw;
   justify-content: space-evenly;
   height: 90vh;
 }
@@ -187,7 +187,7 @@ textarea {
   background-color: var(--lightbase);
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 30vw;
   height: 90vh;
 }
 

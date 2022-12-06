@@ -33,7 +33,6 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
 
     function handleSubmit() {
         const completedHike = {...mountainData, ...formData}
-        console.log(`completed hike: ${mountainData}`)
         fetch(userDataURL, {
             method: "POST",
             headers: {
@@ -43,7 +42,7 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
             body: JSON.stringify(completedHike)
         })
         .then((response) => response.json())
-        .then((data) => console.log(data))
+        // .then((data) => console.log(data))
     }
 
     return(
