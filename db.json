@@ -1033,6 +1033,19 @@
       "buddies": "asd",
       "notes": "asdasd",
       "id": 44
+    },
+    {
+      "name": "Buck",
+      "challengeName": "Lake George 12ster",
+      "elevation": 2334,
+      "ascent": 1988,
+      "length": 7,
+      "typicalTime": 4,
+      "difficulty": 2,
+      "date": "2022-12-19",
+      "buddies": "sdf",
+      "notes": "sdf",
+      "id": 45
     }
   ]
 }

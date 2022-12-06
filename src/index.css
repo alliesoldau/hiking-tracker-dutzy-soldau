@@ -215,6 +215,7 @@ h3 {
   flex-direction: row;
   margin: 20px;
   flex-grow: 1;
+  color: black;
 }
 
 .Mountain {

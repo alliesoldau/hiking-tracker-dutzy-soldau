@@ -3,7 +3,7 @@ import PieChartCard from './PieChartCard'
 import Legend from './Legend'
 
 
-function PieChartCollection({ userData }) {
+function PieChartCollection({ userData, setHighlightedChallenge }) {
 
     const [ADK46completedHikes, setADK46completedHikes] = useState([])
     const [CS3500completedHikes, setCS3500completedHikes] = useState([])
@@ -13,7 +13,20 @@ function PieChartCollection({ userData }) {
 
     // TO DO: Map through the mountain arrays and make the mountains appear
     // according to their correct size
-    console.log(ADK46completedHikes)
+
+    function passUpChallenge(name) {
+        if (name === "ADK46") {
+            setHighlightedChallenge(ADK46completedHikes)
+        } else if (name === "Catskill 3500") {
+            setHighlightedChallenge(CS3500completedHikes)
+        } else if (name === "Lake George 12ster") {
+            setHighlightedChallenge(LG12completedHikes)
+        } else if (name === "Lake Placid 9") {
+            setHighlightedChallenge(LP9completedHikes)
+        } else if (name === "Saranc 6") {
+            setHighlightedChallenge(SL6completedHikes)
+        }
+    }
 
     // TO DO: Prohibit a user from inputting a mountain more than once
 
@@ -69,12 +82,12 @@ function PieChartCollection({ userData }) {
         ]
 
     const pieChartCollection = completedHikesObject.map((challenge) => {
-        console.log(`challenge: ${challenge.completed}`)
         if (challenge.completed !== 0) {
             return(
                 <PieChartCard 
                     key={challenge.id}
                     challenge={challenge}
+                    passUpChallenge={passUpChallenge}
                 />
             )
         }

@@ -1,29 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Mountain() {
+function Mountain({ mtn }) {
 
-    const [triangle, setTriangle] = useState(75)
+    const adjustedElevation = (mtn.elevation) / 50;
 
-    const [triangleHeightValue, setTriangleHeightValue] = useState({
+    const triangleHeightValue = {
         width: "0",
         height: "0",
-        border: `75px solid transparent`,
+        border: `30px solid transparent`,
         borderTop: "0",
-        borderBottom: `${triangle}px solid black`,
-    })
-
-    function makeTriangle() {
-        setTriangle((triangle) => triangle + 10)
-        setTriangleHeightValue({
-            width: "0",
-            height: "0",
-            border: `75px solid transparent`,
-            borderTop: "0",
-            borderBottom: `${triangle}px solid black`,
-        })
+        borderBottom: `${adjustedElevation}px solid black`,
     }
+
     return(
-        <div className="triangle" style={triangleHeightValue} onClick={makeTriangle}></div>
+        <div className="triangle" style={triangleHeightValue}>{mtn.name}</div>
     )
 }
 
