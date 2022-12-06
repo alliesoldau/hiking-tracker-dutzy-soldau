@@ -10,7 +10,7 @@ function PieChartCard({ challenge }) {
 
     return(
         <div className="PieChart">
-            <h4>Title</h4>
+            <h4>{challenge.name}</h4>
             <PieChart className="pieChart"
                 data={[
                     { title: challenge.completed, value: challenge.completed, color: '#283618'},

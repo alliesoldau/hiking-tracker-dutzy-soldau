@@ -134,7 +134,7 @@ textarea {
   background-color: var(--neutral);
   display: flex;
   margin: 20px;
-  flex-grow: 2;
+  /* flex-grow: 2; */
   flex-direction: column;
   border-radius: 10px;
 }
@@ -146,6 +146,13 @@ textarea {
 
 .PieChart {
   margin: 20px;
+}
+
+h4 {
+  margin: 0px;
+  background-color: var(--darkbase);
+  border-radius: 7.5px;
+  color: var(--lightneutral)
 }
 
 .pie-chart-legend {

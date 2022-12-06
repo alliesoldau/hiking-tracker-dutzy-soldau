@@ -35,26 +35,31 @@ function PieChartCollection({ userData }) {
             {
                 id: 1,
                 completed: ADK46completedHikes.length,
+                name: "ADK46",
                 total: 46
             },
             {
                 id: 2,
                 completed: CS3500completedHikes.length,
+                name: "Catskill 3500",
                 total: 37
             },
             {
                 id: 3,
                 completed: LG12completedHikes.length,
+                name: "Lake George 12",
                 total: 12
             },
             {
                 id: 4,
                 completed: LP9completedHikes.length,
+                name: "Lake Placid 9",
                 total: 9
             },
             {
                 id: 5,
                 completed: SL6completedHikes.length,
+                name: "Saranac 6",
                 total: 9
             }
         ]
