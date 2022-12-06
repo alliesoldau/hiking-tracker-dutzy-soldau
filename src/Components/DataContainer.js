@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ChallengeSelector from './ChallengeSelector'
 import UserInputForm from './UserInputForm'
 
-function DataContainer({ rawData }) {
+function DataContainer({ rawData, challengesURL, userDataURL }) {
 
     const [mountainsArray, setMountainsArray] = useState([])
     const [mountainData, setMountainData] = useState({
@@ -28,12 +28,23 @@ function DataContainer({ rawData }) {
         "Saranac 6": 4
     }
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        const completedHike = {...mountainData, ...formData}
+    console.log(userDataURL)
+
+    function handleSubmit() {
+        // const completedHike = {...mountainData, ...formData}
         // console.log(`completed hike: ${mountainData}`)
-        
+        fetch(userDataURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
     }
+
     return(
         <div className="Data-Container">
             <ChallengeSelector

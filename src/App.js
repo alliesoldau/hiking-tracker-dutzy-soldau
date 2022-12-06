@@ -5,31 +5,34 @@ import DataContainer from './Components/DataContainer'
 import GraphicalRepresentation from './Components/GraphicalRepresentation'
 
 // HOW TO START PORTS:  json-server --watch ./data/index.js --port 3000
+// how to site: https://github.com/huychau/json-server-multiple-files/tree/master/fakeapis
 
 function App() {
 
+  const baseURL = "http://localhost:3000/"
+  const challengesURL = baseURL + "challenges/"
+  const userDataURL = baseURL + "userData/"
+
   // IMPORTANT TO DO: How to ensure the URL is the same every time?
-  const baseChallengesURL = "http://localhost:3000/SourceData"
-  const baseUserDataURL = "http://localhost:3000/UserData"
 
   const [rawData, setRawData] = useState([])
   const [userData, setUserData] = useState([])
 
   useEffect(() => {
-    fetch(baseChallengesURL)
+    fetch(challengesURL)
     .then((response) => response.json())
-    .then((data) => setRawData(data.challenges))
-    console.log(rawData)
+    .then((data) => {
+      setRawData(data)
+    })
   }, [])
 
-  // IMPORTANT TO DO: I think we need to specify which port this
-  // is gonna run through so that the fetch request works more consistently? 
   useEffect(() => {
-    fetch(baseUserDataURL)
+    fetch(userDataURL)
     .then((response) => response.json())
-    .then((data) => setUserData(data))
+    .then((data) => {
+      setUserData(data)
+    })
   }, [])
-
   console.log(userData)
 
   return (
@@ -40,6 +43,8 @@ function App() {
           <GraphicalRepresentation />
             <DataContainer 
               rawData={rawData}
+              challengesURL={challengesURL}
+              userDataURL={userDataURL}
             />
         </div>
       </div>
