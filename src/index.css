@@ -72,7 +72,6 @@ select {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 50%;
   padding: 10px;
 }
 
@@ -86,6 +85,11 @@ select {
   color: black;
   margin: 10px;
   border-radius: 10px;
+}
+
+.Data-Container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 input.date, input.buddies {
@@ -153,6 +157,12 @@ h4 {
   background-color: var(--darkbase);
   border-radius: 7.5px;
   color: var(--lightneutral)
+}
+
+h3 {
+  margin: 10px;
+  color: var(--lightneutral);
+  font-size: 1.5em;
 }
 
 .pie-chart-legend {
