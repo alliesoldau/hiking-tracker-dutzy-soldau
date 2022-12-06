@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PieChartCard from './PieChartCard'
+import Legend from './Legend'
 
 
 function PieChartCollection({ userData }) {
-
-    // TO DO: Pull the user data from the user data database
-    // map through the data and create a piechartcard for each object
-    // pie chart info: https://www.npmjs.com/package/react-minimal-pie-chart
 
     const [ADK46completedHikes, setADK46completedHikes] = useState([])
     const [CS3500completedHikes, setCS3500completedHikes] = useState([])
@@ -64,20 +61,23 @@ function PieChartCollection({ userData }) {
 
     const pieChartCollection = completedHikesObject.map((challenge) => {
         console.log(`challenge: ${challenge.completed}`)
-        return(
-            <PieChartCard 
-                key={challenge.id}
-                challenge={challenge}
-            />
-        )
+        if (challenge.completed !== 0) {
+            return(
+                <PieChartCard 
+                    key={challenge.id}
+                    challenge={challenge}
+                />
+            )
+        }
     })
 
     return(
         <div className="PieChartCollection">
-            <p>PieChartCollection</p>
+            <h3>Active Challenges</h3>
             <div className="Graphs-Container">
                 {pieChartCollection}
             </div>
+            <Legend />
         </div>
     )
 }

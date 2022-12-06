@@ -145,12 +145,46 @@ textarea {
 }
 
 .PieChart {
-  background-color: var(--lightbase);
   margin: 20px;
-  border-radius: 50px;
-  height: 100px;
-  width: 100px;
 }
+
+.pie-chart-legend {
+  display: flex;
+  justify-content: space-evenly;
+}
+.legend-assignments {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.color-block-container-completed {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+  background-color: var(--darkbase);
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.color-block-container-remaining {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+  background-color: var(--lightbase);
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.completed-hikes {
+  margin: 10px;
+}
+
+.remaining-hikes {
+  margin: 10px;
+} 
 
 .HikeDetails {
   background-color: var(--darkbase);
