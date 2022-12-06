@@ -5,7 +5,6 @@ function MountainCollection({ highlightedChallenge }) {
 
     // TO DO: Clearn highlighted challenge after a click so that the data doesn't stick around
 
-    console.log(highlightedChallenge)
     const mountainTriangles = highlightedChallenge.map((mtn) => {
         return(
             <Mountain

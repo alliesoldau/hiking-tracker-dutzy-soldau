@@ -2,7 +2,8 @@ import React from 'react';
 
 function Mountain({ mtn }) {
 
-    const adjustedElevation = (mtn.elevation) / 50;
+    // some funky math to exagerate the height difference
+    const adjustedElevation = ((((mtn.elevation) / 100) -20) * 3);
 
     const triangleHeightValue = {
         width: "0",
@@ -13,7 +14,9 @@ function Mountain({ mtn }) {
     }
 
     return(
-        <div className="triangle" style={triangleHeightValue}>{mtn.name}</div>
+        <div className="Mountain">
+            <div className="triangle" style={triangleHeightValue}>{mtn.name}</div>
+        </div>
     )
 }
 

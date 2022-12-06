@@ -214,13 +214,18 @@ h3 {
   display: flex;
   flex-direction: row;
   margin: 20px;
-  flex-grow: 1;
   color: black;
 }
 
 .Mountain {
-  background-color: maroon;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.triangle {
+  margin: 5px;
+
 }
 
 .App-container {
