@@ -919,6 +919,7 @@
   "userData": [
     {
       "id": 1,
+      "challengeName": "testChallenge",
       "name": "testName",
       "elevation": 6969,
       "ascent": 666,
@@ -930,40 +931,17 @@
       "notes": "testNotes"
     },
     {
-      "name": "Sleeping Beauty",
-      "elevation": 2347,
-      "ascent": 1437,
-      "length": 4.7,
-      "typicalTime": 3,
-      "difficulty": 2,
-      "date": "2022-11-29",
-      "buddies": "sdf",
-      "notes": "sdf",
-      "id": 2
-    },
-    {
-      "name": "Fivemile",
-      "elevation": 2256,
-      "ascent": 1228,
-      "length": 8.3,
-      "typicalTime": 5,
-      "difficulty": 1,
-      "date": "2022-12-20",
-      "buddies": "asd",
-      "notes": "asd",
-      "id": 3
-    },
-    {
-      "name": "Bear Den",
-      "elevation": 2650,
-      "ascent": 1683,
-      "length": 4.5,
-      "typicalTime": 3.2,
+      "name": "Panther (Winter)",
+      "challengeName": "Catskill 3500",
+      "elevation": 3724,
+      "ascent": 2105,
+      "length": 6.3,
+      "typicalTime": 4,
       "difficulty": 3,
-      "date": "2022-12-22",
-      "buddies": "qwerqwer",
-      "notes": "qwerqwerqwer",
-      "id": 4
+      "date": "2022-12-23",
+      "buddies": "allie",
+      "notes": "saadfkujg",
+      "id": 2
     }
   ]
 }

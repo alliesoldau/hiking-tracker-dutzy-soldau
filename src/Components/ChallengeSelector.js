@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ChallengesDD from './ChallengesDD';
 import MountainsDD from './MountainsDD';
 
-function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountainData, setMountainData, indexArray }) {
+function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, 
+    mountainData, setMountainData, indexArray }) {
+
+    const [challengeName, setChallengeName] = useState("")
 
     const challengesDD = rawData.map((challenge) => {
         return(
@@ -15,6 +18,7 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountai
 
     function handleChallengeSelection(e) {
         e.preventDefault()
+        setChallengeName(e.target.value)
         const index = indexArray[`${e.target.value}`]
         // TO DO: get ride of selectedChallenge if I end up not needing it
         setMountainsArray(rawData[index].mountains)
@@ -37,6 +41,7 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray, mountai
                 setMountainData({
                     ...mountainData,
                     name: mount.name,
+                    challengeName: challengeName,
                     elevation: mount.elevation,
                     ascent: mount.ascent,
                     length: mount.length,

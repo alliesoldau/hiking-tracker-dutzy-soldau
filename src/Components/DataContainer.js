@@ -7,6 +7,7 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
     const [mountainsArray, setMountainsArray] = useState([])
     const [mountainData, setMountainData] = useState({
         name: "",
+        challengeName: "",
         elevation: 0,
         ascent: 0,
         length: 0,

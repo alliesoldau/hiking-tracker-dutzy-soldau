@@ -5,11 +5,11 @@ import MountainCollection from './MountainCollection';
 
 function GraphicalRepresenation({ userData }) {
 
-    console.table(userData)
-
     return(
         <div className="GraphicalRepresentation">
-            <PieChartCollection />
+            <PieChartCollection 
+                userData={userData}
+            />
             <HikeDetails />
             <MountainCollection />
         </div>
