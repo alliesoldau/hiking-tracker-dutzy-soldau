@@ -9,9 +9,9 @@ import GraphicalRepresentation from './Components/GraphicalRepresentation'
 
 function App() {
 
-  const baseURL = "http://localhost:3000/"
-  const challengesURL = baseURL + "challenges/"
-  const userDataURL = baseURL + "userData/"
+  const baseURL = "http://localhost:6001/"
+  const challengesURL = baseURL + "challenges"
+  const userDataURL = baseURL + "userData"
 
   // IMPORTANT TO DO: How to ensure the URL is the same every time?
 
@@ -33,7 +33,7 @@ function App() {
       setUserData(data)
     })
   }, [])
-  console.log(userData)
+  console.log(`userData: ${userData}`)
 
   return (
     <div className="App">
