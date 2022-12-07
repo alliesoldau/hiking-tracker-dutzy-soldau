@@ -166,7 +166,7 @@ textarea {
   display: flex;
   flex-direction: column;
   width: 70vw;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 90vh;
 }
 
@@ -251,16 +251,21 @@ h3 {
   flex-direction: row;
   margin: 20px;
   color: black;
+  flex-wrap: wrap;
 }
 
 .Mountain {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  justify-content: space-between;
+  width: 12%;
+  padding-left: auto;
+  padding-right: auto;
+  font-size: 0.75em;
 }
 
 .triangle {
-  margin: 5px;
+  margin: auto;
 }
 
 .App-container {
@@ -293,6 +298,7 @@ button.submit {
 
 a {
   text-decoration: none;
+  text-align: center;
 }
 
 .EditHike {

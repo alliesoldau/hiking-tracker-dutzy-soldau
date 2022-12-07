@@ -9,13 +9,14 @@ function Mountain({ mtn }) {
         height: "0",
         border: `30px solid transparent`,
         borderTop: "0",
-        borderBottom: `100px solid #5C4033`,
+        borderBottom: `40px solid #5C4033`,
     }
 
     return(
         <div className="Mountain">
             <Link to={`/mountain/${mtn.id}/edit`} >
-                <div className="triangle" style={triangleStyling}>{mtn.name}</div>
+                <div className="triangle" style={triangleStyling}></div>
+                {mtn.name}
             </Link>
         </div>
     )
