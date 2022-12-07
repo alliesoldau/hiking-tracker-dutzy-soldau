@@ -21,7 +21,9 @@ function About() {
                     Clicking on a mountain displays more information about the hike, and allows you to make edits if need be.
                 </p>
             </div>
-            <img src={mtnpng}></img>
+            <div className="image">
+                <img src={mtnpng}></img>
+            </div>
         </div>
     )
 }

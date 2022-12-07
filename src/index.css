@@ -333,9 +333,8 @@ a {
 
 .About {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--lightneutral)
@@ -344,14 +343,21 @@ a {
 .aboutDetailsContainer {
   text-align: left;
   margin-left: 30px;
+  margin-right: 30px;
+  height: 70vh;
+}
+
+.image {
+  width: 100vw;
+  flex: 0 0 200px;
 }
 
 img {
   overflow: hidden;
-  height: auto;
   width: 100vw;
   object-fit: cover;
-  object-position: 30% 0;
-  
+  object-position: 35% 0;
+  bottom: 0;
 }
+
 /* https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */
