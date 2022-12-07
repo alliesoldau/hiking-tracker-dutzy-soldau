@@ -58,7 +58,9 @@ function App() {
             />
           </Route>
           <Route path="/mountain/:id/edit">
-            <EditHike />
+            <EditHike 
+              userDataURL={userDataURL}
+            />
           </Route>
         </Switch>
       </div>

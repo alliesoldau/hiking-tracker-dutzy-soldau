@@ -6,8 +6,6 @@ function GraphicalRepresenation({ userData }) {
 
     const [highlightedChallenge, setHighlightedChallenge] = useState([])
 
-    console.log(highlightedChallenge)
-
     return(
         <div className="GraphicalRepresentation">
             <PieChartCollection 

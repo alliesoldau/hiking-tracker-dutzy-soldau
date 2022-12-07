@@ -12,8 +12,6 @@ function Mountain({ mtn }) {
         borderBottom: `100px solid #5C4033`,
     }
 
-    console.log(`mtn: ${mtn.notes}`)
-
     return(
         <div className="Mountain">
             <Link to={`/mountain/${mtn.id}/edit`} >
