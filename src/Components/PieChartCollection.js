@@ -64,7 +64,7 @@ function PieChartCollection({ userData, setHighlightedChallenge }) {
             {
                 id: 3,
                 completed: LG12completedHikes.length,
-                name: "Lake George 12",
+                name: "Lake George 12ster",
                 total: 12
             },
             {

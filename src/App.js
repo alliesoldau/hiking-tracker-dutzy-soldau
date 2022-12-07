@@ -1,8 +1,10 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Header from './Components/Header'
-import DataContainer from './Components/DataContainer'
-import GraphicalRepresentation from './Components/GraphicalRepresentation'
+import Home from "./Components/Home"
+import About from "./Components/About"
+import EditHike from './Components/EditHike';
 
 // HOW TO START PORTS:  json-server --watch ./data/index.js --port 3000
 // how to site: https://github.com/huychau/json-server-multiple-files/tree/master/fakeapis
@@ -37,16 +39,22 @@ function App() {
     <div className="App">
       <div className="App-container">
         <Header />
-        <div className="Body-Container">
-          <GraphicalRepresentation
-            userData={userData} 
-          />
-            <DataContainer 
+        <Switch >
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route exact path="/">
+            <Home 
+              userData={userData}
               rawData={rawData}
               challengesURL={challengesURL}
               userDataURL={userDataURL}
             />
-        </div>
+          </Route>
+          <Route path="/mountain/:id/edit">
+            <EditHike />
+          </Route>
+        </Switch>
       </div>
     </div>
   );

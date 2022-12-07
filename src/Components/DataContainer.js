@@ -68,7 +68,7 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
                 rawData={rawData}
             />
             <div>
-                <button onClick={handleSubmit} type='submit'>Submit Form</button>
+                <button onClick={handleSubmit} type='submit' className="submit">Submit Form</button>
             </div>
         </div>
     )

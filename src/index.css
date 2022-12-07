@@ -24,7 +24,42 @@ code {
 .Header {
   background-color: var(--darkbase);
   color: var(--lightneutral);
-  height: 10vh;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--neutral);
+  margin-right: 10px;
+  margin-left: 22px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-left: 0px;
+}
+
+.button,
+button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+  color: black;
+  background-color: var(--lightneutral);
+  border-radius: 10px;
+  transition: background-color 0.2s;
+  margin: 8px;
 }
 
 .ChallengeSelector {
@@ -248,10 +283,11 @@ h3 {
   height: 90vh;
 }
 
-.button {
-  width: 8vw;
-  margin: 5px;
+button.submit {
+  width: 11vw;
   text-align: center;
+  margin: auto;
+  padding: 0px;  
 }
 
 
