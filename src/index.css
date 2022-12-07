@@ -290,6 +290,9 @@ button.submit {
   padding: 0px;  
 }
 
+a {
+  text-decoration: none;
+}
 
 
 /* https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */

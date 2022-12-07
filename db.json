@@ -1163,6 +1163,45 @@
       "buddies": "Ur MOM",
       "notes": "ouch",
       "id": 54
+    },
+    {
+      "name": "Van Hoevenberg",
+      "challengeName": "Lake Placid 9",
+      "elevation": 2940,
+      "ascent": 892,
+      "length": 4.4,
+      "typicalTime": 2.2,
+      "difficulty": 2,
+      "date": "2022-12-07",
+      "buddies": "Javi , Fuck kevin",
+      "notes": "kevin sucks",
+      "id": 55
+    },
+    {
+      "name": "Ampersand",
+      "challengeName": "Saranac 6",
+      "elevation": 3353,
+      "ascent": 1775,
+      "length": 5.4,
+      "typicalTime": 3.5,
+      "difficulty": 3,
+      "date": "2022-12-19",
+      "buddies": "testing",
+      "notes": "gggggggg",
+      "id": 56
+    },
+    {
+      "name": "Ampersand",
+      "challengeName": "Saranac 6",
+      "elevation": 3353,
+      "ascent": 1775,
+      "length": 5.4,
+      "typicalTime": 3.5,
+      "difficulty": 3,
+      "date": "2022-12-19",
+      "buddies": "testing",
+      "notes": "gggggggg",
+      "id": 57
     }
   ]
 }
