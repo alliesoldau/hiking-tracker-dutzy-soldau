@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ChallengesDD from './ChallengesDD';
 import MountainsDD from './MountainsDD';
 
-function DataContainer({ rawData, challengesURL, userDataURL }) {
+function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
 
     const [mountainsArray, setMountainsArray] = useState([])
     const [mountainData, setMountainData] = useState({
@@ -40,7 +40,7 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
             body: JSON.stringify(completedHike)
         })
         .then((response) => response.json())
-        // .then((data) => console.log(data))
+        .then((data) => passUpCompletedHike(data))
         setMountainData({
             name: "",
             challengeName: "",
@@ -111,6 +111,9 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
         setFormData({...formData, [name]: value,})
     } 
 
+    // TO DO: When you click submit mountain won't go back to default
+    // TO DO: Make it so you can't submit with the emojis as the selected challenge
+
     return(
         <form onSubmit={handleSubmit}>
             <div className="Data-Container">
@@ -120,10 +123,9 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
                             <label>Select a Challenge:</label>
                             <select
                                 onChange={handleChallengeSelection}
-                                placeholder='Select Challenge...' 
                                 name='challenge' 
                                 id='challenge'>
-                                    <option className="bootOption" value="🥾🥾⛰️">🥾🥾⛰️</option>
+                                    <option className="bootOption">🥾🥾⛰️</option>
                                     {challengesDD}
                             </select>
                         </div>

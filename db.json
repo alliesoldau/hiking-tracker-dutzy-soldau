@@ -1345,6 +1345,71 @@
       "buddies": "",
       "notes": "",
       "id": 68
+    },
+    {
+      "name": "Blackhead (Winter)",
+      "challengeName": "Catskill 3500",
+      "elevation": 3940,
+      "ascent": 1864,
+      "length": 4.8,
+      "typicalTime": 3.8,
+      "difficulty": 4,
+      "date": "2022-12-22",
+      "buddies": "dfghdfgh",
+      "notes": "dfghdfgh",
+      "id": 69
+    },
+    {
+      "name": "Blackhead (Winter)",
+      "challengeName": "Catskill 3500",
+      "elevation": 3940,
+      "ascent": 1864,
+      "length": 4.8,
+      "typicalTime": 3.8,
+      "difficulty": 4,
+      "date": "2022-12-15",
+      "buddies": "as",
+      "notes": "aas",
+      "id": 70
+    },
+    {
+      "name": "Panther",
+      "challengeName": "Catskill 3500",
+      "elevation": 3724,
+      "ascent": 2105,
+      "length": 6.3,
+      "typicalTime": 4,
+      "difficulty": 3,
+      "date": "2022-12-12",
+      "buddies": "wret",
+      "notes": "wert",
+      "id": 71
+    },
+    {
+      "name": "Santononi",
+      "challengeName": "ADK46",
+      "elevation": 4607,
+      "ascent": 2860,
+      "length": 11.4,
+      "typicalTime": 10,
+      "difficulty": 5,
+      "date": "2022-12-20",
+      "buddies": "asd",
+      "notes": "asd",
+      "id": 72
+    },
+    {
+      "name": "Baker",
+      "challengeName": "Saranac 6",
+      "elevation": 2452,
+      "ascent": 884,
+      "length": 1.8,
+      "typicalTime": 1.3,
+      "difficulty": 2,
+      "date": "2022-12-09",
+      "buddies": "sdfg",
+      "notes": "sdfg",
+      "id": 73
     }
   ]
 }

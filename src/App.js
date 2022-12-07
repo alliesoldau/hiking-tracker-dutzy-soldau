@@ -34,6 +34,11 @@ function App() {
     })
   }, [])
 
+  function passUpCompletedHike(completedHike) {
+    console.log(completedHike)
+    setUserData([...userData, completedHike])
+  }
+
 
   return (
     <div className="App">
@@ -49,6 +54,7 @@ function App() {
               rawData={rawData}
               challengesURL={challengesURL}
               userDataURL={userDataURL}
+              passUpCompletedHike={passUpCompletedHike}
             />
           </Route>
           <Route path="/mountain/:id/edit">
