@@ -43,6 +43,7 @@ function EditHike({ userDataURL }) {
             body: JSON.stringify(hikeDetails),
             })
             .then((r) => r.json())
+            alert("Hike has been updated successfully")
             history.push("/")
         }
 
