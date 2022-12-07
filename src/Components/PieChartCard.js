@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-function PieChartCard({ challenge, passUpChallenge }) {
+function PieChartCard({ challenge, passUpChallenge, backgroundChange }) {
 
     // TO DO: Show a percentage of completed hikes??
     // TO DO: When you complete all hikes, change pie chart to the patch
@@ -11,7 +11,7 @@ function PieChartCard({ challenge, passUpChallenge }) {
 
     return(
         <div className="PieChart" onClick={handlePieChartClick}>
-            <h4>{challenge.name}</h4>
+            <h4 className={backgroundChange === challenge.name ? "background-1" : "background-2"}>{challenge.name}</h4>
             <PieChart className="pieChart"
                 data={[
                     { title: challenge.completed, value: challenge.completed, color: '#283618'},

@@ -10,6 +10,7 @@ function PieChartCollection({ userData, setHighlightedChallenge }) {
     const [LG12completedHikes, setLG12completedHikes] = useState([])
     const [LP9completedHikes, setLP9completedHikes] = useState([])
     const [SL6completedHikes, setSL6completedHikes] = useState([])
+    const [backgroundChange, setBackgroundChange] = useState("")
 
     // TO DO: Map through the mountain arrays and make the mountains appear
     // according to their correct size
@@ -26,6 +27,7 @@ function PieChartCollection({ userData, setHighlightedChallenge }) {
         } else if (name === "Saranac 6") {
             setHighlightedChallenge(SL6completedHikes)
         }
+        setBackgroundChange(name)
     }
 
     // TO DO: Prohibit a user from inputting a mountain more than once
@@ -88,6 +90,7 @@ function PieChartCollection({ userData, setHighlightedChallenge }) {
                     key={challenge.id}
                     challenge={challenge}
                     passUpChallenge={passUpChallenge}
+                    backgroundChange={backgroundChange}
                 />
             )
         }

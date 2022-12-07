@@ -165,7 +165,7 @@ textarea {
   color: white;
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: 80vw;
   justify-content: flex-start;
   height: 90vh;
 }
@@ -284,7 +284,7 @@ h3 {
   background-color: var(--lightbase);
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 20vw;
   height: 90vh;
 }
 
@@ -359,5 +359,15 @@ img {
   object-position: 35% 0;
   bottom: 0;
 }
+
+.background-1 {
+  background-color: var(--lightbase);
+}
+
+.background-2 {
+  background-color: var(--darkbase);
+}
+
+
 
 /* https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */
