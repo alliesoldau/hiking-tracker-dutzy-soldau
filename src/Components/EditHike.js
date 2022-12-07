@@ -6,6 +6,7 @@ import {useParams, useHistory } from 'react-router-dom'
 function EditHike({ userDataURL }) {
 
     const { id } = useParams()
+    
     const [hikeDetails, setHikeDetails] = useState({
         name: "",
         challengeName: "",
@@ -54,15 +55,15 @@ function EditHike({ userDataURL }) {
             <div className="FormContainer">
                 <form onSubmit={handleSubmit}>
                     <h2>Hike Details: </h2>
-                    <p>Challenge:  {hikeDetails.challengeName}</p>
-                    <p>Mountain: {hikeDetails.name}</p>
-                    <p>Elevation: {hikeDetails.elevation} ft</p>
-                    <p>Ascent: {hikeDetails.ascent} ft</p>
-                    <p>Length: {hikeDetails.length} mi</p>
-                    <p>Typical Time: {hikeDetails.typicalTime} hours</p>
-                    <p>Difficulty: {hikeDetails.difficulty}/7</p>
+                    <p><b>Challenge:  </b>{hikeDetails.challengeName}</p>
+                    <p><b>Mountain: </b>{hikeDetails.name}</p>
+                    <p><b>Elevation: </b>{hikeDetails.elevation} ft</p>
+                    <p><b>Ascent: </b>{hikeDetails.ascent} ft</p>
+                    <p><b>Length: </b>{hikeDetails.length} mi</p>
+                    <p><b>Typical Time: </b>{hikeDetails.typicalTime} hours</p>
+                    <p><b>Difficulty: </b>{hikeDetails.difficulty}/7</p>
                     <div>
-                        <label>Date: </label>
+                        <label><b>Date: </b></label>
                         <input 
                             value={hikeDetails.date}
                             onChange={handleChange}
@@ -72,7 +73,7 @@ function EditHike({ userDataURL }) {
                         />
                     </div>
                     <div>
-                        <label>Buddies: </label>
+                        <label><b>Buddies: </b></label>
                         <input 
                             type="text"
                             name="buddies"
@@ -81,7 +82,7 @@ function EditHike({ userDataURL }) {
                         />
                     </div>
                     <div>
-                        <label>Notes: </label>
+                        <label><b>Notes: </b></label>
                         <textarea 
                             value={hikeDetails.notes}
                             onChange={handleChange}

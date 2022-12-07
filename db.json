@@ -1199,7 +1199,7 @@
       "typicalTime": 4,
       "difficulty": 3,
       "date": "2022-12-15",
-      "buddies": "asd",
+      "buddies": "KEVVVVin",
       "notes": "asd",
       "id": 59
     },
@@ -1386,17 +1386,43 @@
       "id": 74
     },
     {
-      "name": "St. Regis",
+      "name": "Scarface",
       "challengeName": "Saranac 6",
-      "elevation": 2874,
-      "ascent": 1266,
-      "length": 6.6,
+      "elevation": 3054,
+      "ascent": 1480,
+      "length": 6.8,
       "typicalTime": 3.5,
       "difficulty": 2,
-      "date": "2022-12-16",
-      "buddies": "cecilia",
-      "notes": "asdfasdfasdf",
+      "date": "2022-12-17",
+      "buddies": "GGGGG",
+      "notes": "GGGG",
       "id": 75
+    },
+    {
+      "name": "McKenzie",
+      "challengeName": "Saranac 6",
+      "elevation": 3822,
+      "ascent": 2221,
+      "length": 6.3,
+      "typicalTime": 4,
+      "difficulty": 5,
+      "date": "2022-12-08",
+      "buddies": "SDFASDFASDF",
+      "notes": "ASDFASDFASDFASDF",
+      "id": 76
+    },
+    {
+      "name": "Van Hoevenberg",
+      "challengeName": "Lake Placid 9",
+      "elevation": 2940,
+      "ascent": 892,
+      "length": 4.4,
+      "typicalTime": 2.2,
+      "difficulty": 2,
+      "date": "2022-12-16",
+      "buddies": "sdfsdfsdf",
+      "notes": "sdfsdfsdf",
+      "id": 77
     }
   ]
 }

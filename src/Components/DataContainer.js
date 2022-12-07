@@ -111,7 +111,6 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
         setFormData({...formData, [name]: value,})
     } 
 
-    // TO DO: When you click submit mountain won't go back to default
     // TO DO: Make it so you can't submit with the emojis as the selected challenge
 
     return(
@@ -125,7 +124,7 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
                                 onChange={handleChallengeSelection}
                                 name='challenge' 
                                 id='challenge'>
-                                    <option className="bootOption">🥾🥾⛰️</option>
+                                    <option className="bootOption">🥾🥾</option>
                                     {challengesDD}
                             </select>
                         </div>
@@ -136,6 +135,7 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
                             placeholder='Select Mountain...' 
                             name='mountain' 
                             id='mountain'>
+                                <option className="bootOption">⛰️</option>
                                 {mountainsDD}
                         </select>
                     </div>

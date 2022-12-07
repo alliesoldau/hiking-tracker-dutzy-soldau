@@ -306,7 +306,14 @@ a {
   width: 40%;
 }
 
+.EditHike .submit {
+  margin-bottom: 15px;
+  width: 150px;
+}
+
 .FormContainer {
+  text-align: left;
+  padding-left: 20px;
   background-color: var(--darkneutral);
   color: white;
   width: 50%;
@@ -316,7 +323,5 @@ a {
   justify-content: space-between;
   flex-direction: column;
 }
-
-
 
 /* https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */
