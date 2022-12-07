@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {useParams, useHistory} from 'react-router-dom'
+import {useParams, useHistory } from 'react-router-dom'
 
 // TO DO: allow a patch from editing the form
 
@@ -43,46 +43,57 @@ function EditHike({ userDataURL }) {
             body: JSON.stringify(hikeDetails),
             })
             .then((r) => r.json())
+            alert("Hike has been updated successfully")
+            //history.push("/")
         }
 
 
+
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <h2>Hike Details: </h2>
-                <p>Challenge:  {hikeDetails.challengeName}</p>
-                <p>Mountain: {hikeDetails.name}</p>
-                <p>Elevation: {hikeDetails.elevation} ft</p>
-                <p>Ascent: {hikeDetails.ascent} ft</p>
-                <p>Length: {hikeDetails.length} mi</p>
-                <p>Typical Time: {hikeDetails.typicalTime} hours</p>
-                <p>Difficulty: {hikeDetails.difficulty}/7</p>
-                <label>Date: </label>
-                <input 
-                    value={hikeDetails.date}
-                    onChange={handleChange}
-                    type="date" 
-                    className="date" 
-                    name="date" 
-                />
-                <label>Buddies: </label>
-                <input 
-                    type="text"
-                    name="buddies"
-                    value={hikeDetails.buddies}
-                    onChange={handleChange}
-                />
-                <label>Notes: </label>
-                    <textarea 
-                        value={hikeDetails.notes}
-                        onChange={handleChange}
-                        placeholder='Tell us about your hike..' 
-                        className="notes"  
-                        name="notes" 
-                        rows="4" cols="25">
-                    </textarea>
-                    <button type='submit' className="submit">Submit Edits</button>
-            </form>
+        <div className="EditHike">
+            <div className="FormContainer">
+                <form onSubmit={handleSubmit}>
+                    <h2>Hike Details: </h2>
+                    <p>Challenge:  {hikeDetails.challengeName}</p>
+                    <p>Mountain: {hikeDetails.name}</p>
+                    <p>Elevation: {hikeDetails.elevation} ft</p>
+                    <p>Ascent: {hikeDetails.ascent} ft</p>
+                    <p>Length: {hikeDetails.length} mi</p>
+                    <p>Typical Time: {hikeDetails.typicalTime} hours</p>
+                    <p>Difficulty: {hikeDetails.difficulty}/7</p>
+                    <div>
+                        <label>Date: </label>
+                        <input 
+                            value={hikeDetails.date}
+                            onChange={handleChange}
+                            type="date" 
+                            className="date" 
+                            name="date" 
+                        />
+                    </div>
+                    <div>
+                        <label>Buddies: </label>
+                        <input 
+                            type="text"
+                            name="buddies"
+                            value={hikeDetails.buddies}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Notes: </label>
+                        <textarea 
+                            value={hikeDetails.notes}
+                            onChange={handleChange}
+                            placeholder='Tell us about your hike..' 
+                            className="notes"  
+                            name="notes" 
+                            rows="2" cols="2">
+                        </textarea>
+                    </div>
+                        <button type='submit' className="submit">Submit Edits</button>
+                </form>
+            </div>
         </div>
     )
 }

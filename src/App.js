@@ -49,7 +49,7 @@ function App() {
             <About />
           </Route>
           <Route exact path="/">
-            <Home 
+            <Home
               userData={userData}
               rawData={rawData}
               challengesURL={challengesURL}

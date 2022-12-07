@@ -24,7 +24,6 @@ code {
 .Header {
   background-color: var(--darkbase);
   color: var(--lightneutral);
-  height: 30vh;
   display: flex;
   flex-direction: column;
 }
@@ -262,7 +261,6 @@ h3 {
 
 .triangle {
   margin: 5px;
-
 }
 
 .App-container {
@@ -296,6 +294,29 @@ button.submit {
 a {
   text-decoration: none;
 }
+
+.EditHike {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.EditHike .date {
+  width: 40%;
+}
+
+.FormContainer {
+  background-color: var(--darkneutral);
+  color: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 
 
 /* https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */
