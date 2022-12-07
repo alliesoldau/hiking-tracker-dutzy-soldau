@@ -2,25 +2,22 @@ import { DomPlatform } from 'chart.js';
 import React from 'react';
 import { Link } from "react-router-dom"
 
-function Mountain({ mtn, minElevation }) {
+function Mountain({ mtn }) {
 
-    // some funky math to exagerate the height difference
-    const elevation = mtn.elevation
-    const exageratedElevation = (((elevation - minElevation+100))/2)
-    console.log(mtn.id)
-
-    const triangleHeightValue = {
+    const triangleStyling = {
         width: "0",
         height: "0",
         border: `30px solid transparent`,
         borderTop: "0",
-        borderBottom: `${exageratedElevation}px solid #5C4033`,
+        borderBottom: `100px solid #5C4033`,
     }
+
+    console.log(`mtn: ${mtn.notes}`)
 
     return(
         <div className="Mountain">
-            <Link to={`/mountain/${mtn.id}/edit`}>
-                <div className="triangle" style={triangleHeightValue}>{mtn.name}</div>
+            <Link to={`/mountain/${mtn.id}/edit`} >
+                <div className="triangle" style={triangleStyling}>{mtn.name}</div>
             </Link>
         </div>
     )

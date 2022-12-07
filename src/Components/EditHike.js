@@ -5,7 +5,9 @@ import React from 'react';
 
 function EditHike() {
     return(
-        <p>Edit mountain form</p>
+        <div>
+        <p>Edit hike form</p>
+        </div>
     )
 }
 

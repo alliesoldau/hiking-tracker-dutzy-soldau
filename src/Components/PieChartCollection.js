@@ -23,7 +23,7 @@ function PieChartCollection({ userData, setHighlightedChallenge }) {
             setHighlightedChallenge(LG12completedHikes)
         } else if (name === "Lake Placid 9") {
             setHighlightedChallenge(LP9completedHikes)
-        } else if (name === "Saranc 6") {
+        } else if (name === "Saranac 6") {
             setHighlightedChallenge(SL6completedHikes)
         }
     }
@@ -77,7 +77,7 @@ function PieChartCollection({ userData, setHighlightedChallenge }) {
                 id: 5,
                 completed: SL6completedHikes.length,
                 name: "Saranac 6",
-                total: 9
+                total: 6
             }
         ]
 

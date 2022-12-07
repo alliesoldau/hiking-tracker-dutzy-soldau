@@ -190,10 +190,11 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
                         </div> */}
                     </div>
                 </div>
+                <div className="submit">
+                    <button type='submit' className="submit">Submit Form</button>
+                </div>
             </div>
-            <div>
-                <button type='submit' className="submit">Submit Form</button>
-            </div>
+                
         </form>
     )
 }

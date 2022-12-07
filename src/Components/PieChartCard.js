@@ -1,8 +1,6 @@
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-
-
 function PieChartCard({ challenge, passUpChallenge }) {
 
     // TO DO: Show a percentage of completed hikes??
