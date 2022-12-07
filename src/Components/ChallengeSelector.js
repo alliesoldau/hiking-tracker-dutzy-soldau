@@ -52,10 +52,6 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray,
         })
     }    
 
-    // TO DO: Make it so the challenges populate with nothing on page load
-    // and make it so you can click on the mountains without first having 
-    // to click off of the first mountain that renders in the list
-
     return(
         <div className="ChallengeSelector">
             <div className="Selector-Container">
@@ -66,7 +62,7 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray,
                         placeholder='Select Challenge...' 
                         name='challenge' 
                         id='challenge'>
-                            <option className="bootOption">🥾🥾⛰️</option>
+                            <option className="bootOption">🥾🥾</option>
                             {challengesDD}
                     </select>
                 </div>
@@ -77,6 +73,7 @@ function ChallengeSelector({ rawData, setMountainsArray, mountainsArray,
                         placeholder='Select Mountain...' 
                         name='mountain' 
                         id='mountain'>
+                            <option className="bootOption">⛰️</option>
                             {mountainsDD}
                     </select>
                 </div>

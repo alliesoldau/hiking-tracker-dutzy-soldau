@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ChallengeSelector from './ChallengeSelector'
-import UserInputForm from './UserInputForm'
+import ChallengesDD from './ChallengesDD';
+import MountainsDD from './MountainsDD';
 
 function DataContainer({ rawData, challengesURL, userDataURL }) {
 
@@ -20,9 +20,6 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
         notes: "",
     })
 
-    // console.log(formData)
-
-    // TO DO: Find a way to not hard code the array indexes or get them more systematically
     const indexArray = {
         "ADK46": 0,
         "Catskill 3500": 1,
@@ -31,7 +28,8 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
         "Saranac 6": 4
     }
 
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault();
         const completedHike = {...mountainData, ...formData}
         fetch(userDataURL, {
             method: "POST",
@@ -43,34 +41,158 @@ function DataContainer({ rawData, challengesURL, userDataURL }) {
         })
         .then((response) => response.json())
         // .then((data) => console.log(data))
+        setMountainData({
+            name: "",
+            challengeName: "",
+            elevation: 0,
+            ascent: 0,
+            length: 0,
+            typicalTime: 0,
+            difficulty: 0
+        })
+        setFormData({
+            date: "",
+            buddies: "",
+            notes: "",
+        })
+        e.target.reset()
     }
 
+    const [challengeName, setChallengeName] = useState("")
+
+    const challengesDD = rawData.map((challenge) => {
+        return(
+            <ChallengesDD 
+                key={challenge.id}
+                challenge={challenge}
+            />
+        )
+    })
+
+    function handleChallengeSelection(e) {
+        e.preventDefault()
+        setChallengeName(e.target.value)
+        const index = indexArray[`${e.target.value}`]
+        // TO DO: get ride of selectedChallenge if I end up not needing it
+        setMountainsArray(rawData[index].mountains)
+    }
+
+    const mountainsDD = mountainsArray.map((mountain) => {
+        return(
+            <MountainsDD
+                key={mountain.name}
+                mountain={mountain}
+            />
+        )
+    })
+
+    function handleMountainSelection(e) {
+        e.preventDefault()
+        const mountain = e.target.value
+        const mountainInfo = mountainsArray.map((mount) => {
+            if (mount.name === mountain) {
+                setMountainData({
+                    ...mountainData,
+                    name: mount.name,
+                    challengeName: challengeName,
+                    elevation: mount.elevation,
+                    ascent: mount.ascent,
+                    length: mount.length,
+                    typicalTime: mount.typicalTime,
+                    difficulty: mount.difficulty,
+                })
+            }
+        })
+    }  
+
+    function handleChange(e) {
+        const name = e.target.name
+        const value = e.target.value
+        setFormData({...formData, [name]: value,})
+    } 
+
     return(
-        <div className="Data-Container">
-            <ChallengeSelector
-                rawData={rawData}
-                mountainsArray={mountainsArray}
-                setMountainsArray={setMountainsArray}
-                mountainData={mountainData}
-                setMountainData={setMountainData}
-                indexArray={indexArray}
-            />
-            <div className="hikeDetails">
-                <p><b>Elevation:</b> {mountainData.elevation}</p>
-                <p><b>Ascent:</b> {mountainData.ascent}</p>
-                <p><b>Length:</b> {mountainData.length}</p>
-                <p><b>Time:</b> {mountainData.typicalTime}</p>
-                <p><b>Difficulty:</b> {mountainData.difficulty}</p>
-            </div>  
-            <UserInputForm 
-                formData={formData}
-                setFormData={setFormData}
-                rawData={rawData}
-            />
-            <div>
-                <button onClick={handleSubmit} type='submit' className="submit">Submit Form</button>
+        <form onSubmit={handleSubmit}>
+            <div className="Data-Container">
+                <div className="ChallengeSelector">
+                    <div className="Selector-Container">
+                        <div className="Challenges-Container">
+                            <label>Select a Challenge:</label>
+                            <select
+                                onChange={handleChallengeSelection}
+                                placeholder='Select Challenge...' 
+                                name='challenge' 
+                                id='challenge'>
+                                    <option className="bootOption" value="🥾🥾⛰️">🥾🥾⛰️</option>
+                                    {challengesDD}
+                            </select>
+                        </div>
+                    <div className="Mountain-Container">
+                        <label>Select a Mountain:</label>
+                        <select 
+                            onChange={handleMountainSelection}
+                            placeholder='Select Mountain...' 
+                            name='mountain' 
+                            id='mountain'>
+                                {mountainsDD}
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
+                <div className="hikeDetails">
+                    <p><b>Elevation:</b> {mountainData.elevation}</p>
+                    <p><b>Ascent:</b> {mountainData.ascent}</p>
+                    <p><b>Length:</b> {mountainData.length}</p>
+                    <p><b>Time:</b> {mountainData.typicalTime}</p>
+                    <p><b>Difficulty:</b> {mountainData.difficulty}</p>
+                </div>  
+                <div className="UserInputForm">
+                    <div className="UserInputDropDowns-Container">
+                        <div className="Date-Container">
+                            <label>Date: </label>
+                            <input 
+                                value={formData.date}
+                                onChange={handleChange}
+                                type="date" 
+                                className="date" 
+                                name="date" />
+                        </div>
+                        <div className="Buddies-Container">
+                            <label>Buddies: </label>
+                            <input 
+                                value={formData.buddies}
+                                onChange={handleChange}
+                                placeholder='Who did you hike with?..'  
+                                type="text" 
+                                className="buddies"  
+                                name="buddies" />
+                        </div>
+                        <div className="Notes-Container">
+                            <label>Notes: </label>
+                            <textarea 
+                                value={formData.notes}
+                                onChange={handleChange}
+                                placeholder='Tell us about your hike..' 
+                                className="notes"  
+                                name="notes" 
+                                rows="4" cols="55">
+                            </textarea>
+                        </div>
+                        {/* <div className="Pics-Container">
+                            <label>Upload A Photo: </label>
+                            <input 
+                            onChange={handleChange}
+                                type="file" 
+                                className="image" 
+                                name="image"/>
+                        </div> */}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type='submit' className="submit">Submit Form</button>
+            </div>
+        </form>
     )
 }
 
