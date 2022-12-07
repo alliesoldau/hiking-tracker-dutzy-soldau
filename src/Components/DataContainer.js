@@ -145,11 +145,11 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
                 </div>
             </div>
                 <div className="hikeDetails">
-                    <p><b>Elevation:</b> {mountainData.elevation}</p>
-                    <p><b>Ascent:</b> {mountainData.ascent}</p>
-                    <p><b>Length:</b> {mountainData.length}</p>
-                    <p><b>Time:</b> {mountainData.typicalTime}</p>
-                    <p><b>Difficulty:</b> {mountainData.difficulty}</p>
+                    <p><b>Elevation:</b> {mountainData.elevation} ft</p>
+                    <p><b>Ascent:</b> {mountainData.ascent} ft</p>
+                    <p><b>Length:</b> {mountainData.length} mi</p>
+                    <p><b>Time:</b> {mountainData.typicalTime} hours</p>
+                    <p><b>Difficulty:</b> {mountainData.difficulty}/7</p>
                 </div>  
                 <div className="UserInputForm">
                     <div className="UserInputDropDowns-Container">
