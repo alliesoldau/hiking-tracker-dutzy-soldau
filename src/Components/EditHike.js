@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {useParams, useHistory } from 'react-router-dom'
-
-// TO DO: allow a patch from editing the form
+import { useParams, useHistory } from 'react-router-dom'
 
 function EditHike({ userDataURL }) {
 
     const { id } = useParams()
+    let history = useHistory()
     
     const [hikeDetails, setHikeDetails] = useState({
         name: "",
@@ -44,8 +43,7 @@ function EditHike({ userDataURL }) {
             body: JSON.stringify(hikeDetails),
             })
             .then((r) => r.json())
-            alert("Hike has been updated successfully")
-            //history.push("/")
+            history.push("/")
         }
 
 

@@ -952,7 +952,7 @@
       "typicalTime": 14,
       "difficulty": 7,
       "date": "2022-12-06",
-      "buddies": "asdasd",
+      "buddies": "adjfhgsudhfaskdjgfhakljdrhgfilas",
       "notes": "asdasd",
       "id": 4
     },
@@ -1423,6 +1423,45 @@
       "buddies": "sdfsdfsdf",
       "notes": "sdfsdfsdf",
       "id": 77
+    },
+    {
+      "name": "Marcy",
+      "challengeName": "ADK46",
+      "elevation": 5344,
+      "ascent": 3166,
+      "length": 14.8,
+      "typicalTime": 10,
+      "difficulty": 5,
+      "date": "2022-12-08",
+      "buddies": "asd",
+      "notes": "jhk",
+      "id": 78
+    },
+    {
+      "name": "Skylight",
+      "challengeName": "ADK46",
+      "elevation": 4926,
+      "ascent": 4265,
+      "length": 17.9,
+      "typicalTime": 15,
+      "difficulty": 7,
+      "date": "2022-12-20",
+      "buddies": "jkl",
+      "notes": "hlk",
+      "id": 79
+    },
+    {
+      "name": "Bear Den",
+      "challengeName": "Lake Placid 9",
+      "elevation": 2650,
+      "ascent": 1683,
+      "length": 4.5,
+      "typicalTime": 3.2,
+      "difficulty": 3,
+      "date": "2022-12-08",
+      "buddies": "allie",
+      "notes": ";'l,,k",
+      "id": 80
     }
   ]
 }

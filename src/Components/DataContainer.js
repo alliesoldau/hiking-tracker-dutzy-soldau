@@ -6,7 +6,7 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
 
     const [mountainsArray, setMountainsArray] = useState([])
     const [mountainData, setMountainData] = useState({
-        name: "",
+        name: "⛰️",
         challengeName: "",
         elevation: 0,
         ascent: 0,
@@ -42,7 +42,7 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
         .then((response) => response.json())
         .then((data) => passUpCompletedHike(data))
         setMountainData({
-            name: "",
+            name: "⛰️",
             challengeName: "",
             elevation: 0,
             ascent: 0,
@@ -134,7 +134,10 @@ function DataContainer({ rawData, userDataURL, passUpCompletedHike }) {
                             onChange={handleMountainSelection}
                             placeholder='Select Mountain...' 
                             name='mountain' 
-                            id='mountain'>
+                            id='mountain' 
+                            value={mountainData.name}
+                            >
+                                
                                 <option className="bootOption">⛰️</option>
                                 {mountainsDD}
                         </select>
