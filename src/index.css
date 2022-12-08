@@ -174,7 +174,6 @@ textarea {
   background-color: var(--neutral);
   display: flex;
   margin: 20px;
-  /* flex-grow: 2; */
   flex-direction: column;
   border-radius: 10px;
 }
@@ -182,6 +181,7 @@ textarea {
 .Graphs-Container {
   display: flex;
   justify-content: center;
+  height: 30vh;
 }
 
 .PieChart {
@@ -189,7 +189,7 @@ textarea {
 }
 
 h4 {
-  margin: 0px;
+  margin: 3px;
   background-color: var(--darkbase);
   border-radius: 7.5px;
   color: var(--lightneutral)
@@ -262,6 +262,7 @@ h3 {
   padding-left: auto;
   padding-right: auto;
   font-size: 0.75em;
+  margin-bottom: 0px;
 }
 
 .triangle {

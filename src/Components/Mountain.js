@@ -9,7 +9,7 @@ function Mountain({ mtn }) {
         height: "0",
         border: `30px solid transparent`,
         borderTop: "0",
-        borderBottom: `40px solid #5C4033`,
+        borderBottom: `30px solid #5C4033`,
     }
 
     return(
