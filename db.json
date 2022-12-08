@@ -1488,6 +1488,45 @@
       "buddies": "Kris",
       "notes": "Finally the last bushwack of the day! By this point I was pretty ready to get on a real trail. The \"trail\" was still beautiful even though I was getting pretty done at this point.",
       "id": 46
+    },
+    {
+      "name": "Sleeping Beauty",
+      "challengeName": "Lake George 12ster",
+      "elevation": 2347,
+      "ascent": 1437,
+      "length": 4.7,
+      "typicalTime": 3,
+      "difficulty": 2,
+      "date": "2022-12-10",
+      "buddies": "Kevin",
+      "notes": "Beautiful view. Fantastic hike.",
+      "id": 47
+    },
+    {
+      "name": "Erebus",
+      "challengeName": "Lake George 12ster",
+      "elevation": 2527,
+      "ascent": 1840,
+      "length": 8.6,
+      "typicalTime": 4.5,
+      "difficulty": 3,
+      "date": "2022-12-10",
+      "buddies": "Gehrig",
+      "notes": "Got bite by a snake.",
+      "id": 48
+    },
+    {
+      "name": "Fivemile",
+      "challengeName": "Lake George 12ster",
+      "elevation": 2256,
+      "ascent": 1228,
+      "length": 8.3,
+      "typicalTime": 5,
+      "difficulty": 1,
+      "date": "2022-11-28",
+      "buddies": "Javi",
+      "notes": "Brought pizza for a snack.",
+      "id": 49
     }
   ]
 }
