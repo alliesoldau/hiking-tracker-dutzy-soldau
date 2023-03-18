@@ -11,6 +11,12 @@ React, CSS, MySQL
 The Hiking Challenge Tracker allows hikers to more easily keep track of which mountains they have completed within their challenges in a simple and visual way. The database is pre-populated with stats on each hike, and hikers can add in their personal information such as the date, who they hiked with, and any notes they had when they log their hike. Hikers can view their progress using the pie-charts and graphically represented list of completed mountains per hiking challenge. Hikers can also edit their hiking information if need be.
 
 ## 🧑 User story:
+* A user can view which challenges they are working on
+* A user can choose a new challenge from the pre-populated drop down
+* A user can add hikes to their challenges
+* When a hike is added it is immediately rendered on the page in the mountain graphics and in the pie charts
+* A user can edit their hikes
+* A user will be alerted if their inputs aren't valid
 
 <!-- 
 ![My Image](/src/images/submit-form.png)
